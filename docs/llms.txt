@@ -1,0 +1,39 @@
+# Isabel Amrein: Del dato al producto
+
+> Isabel Amrein De Luca, Lending Product Manager: proyectos y apuntes sobre datos, IA generativa y producto. Aprender construyendo, con ejemplos propios.
+
+Sitio personal y bilingüe (español e inglés) de Isabel Amrein De Luca, Lending Product Manager. Perfil profesional: https://www.linkedin.com/in/isabel-amrein-de-luca. Contiene proyectos (lo que construye, con su estado, herramientas y resultados) y entradas (apuntes con ejemplos propios).
+
+## Español
+
+### Proyectos
+- [Clasificador de reciclaje](https://isabelamrein.github.io/es/proyectos/clasificador-reciclaje/): Un modelo que, a partir de una foto, dice a qué contenedor va cada objeto. Pensado como un juego educativo para aprender a reciclar.
+- [Máster en Data Science e IA generativa](https://isabelamrein.github.io/es/proyectos/master-data-science-ia/): Lo que voy aprendiendo en mi máster de Data Science e IA generativa, clase a clase, con mis palabras, mis ejemplos y proyectos pequeños para ponerlo a prueba.
+
+### Blog
+- [Del problema al match: cómo plantearíamos buscar casa con IA](https://isabelamrein.github.io/es/blog/del-problema-al-match-buscar-casa-con-ia/): Un caso práctico de clase: cómo pasar de un problema real, buscar casa, a una idea con valor basada en datos e IA, con modelo de negocio y métricas.
+- [Estrategia de datos: primero el propósito, después el plan](https://isabelamrein.github.io/es/blog/estrategia-de-datos-proposito-y-plan/): Una estrategia de datos es un propósito más un plan. Cómo situar una organización según su madurez y por qué el dato solo genera valor si lo entiende quien lo usa.
+- [Machine Learning: cuando los datos escriben las reglas](https://isabelamrein.github.io/es/blog/machine-learning-datos-escriben-reglas/): Qué es el Machine Learning, cómo se construye un proyecto de principio a fin y por qué entrenar el modelo es solo la punta del iceberg.
+
+### Sobre mí
+- [Sobre mí](https://isabelamrein.github.io/es/about/): Isabel Amrein De Luca, Lending Product Manager: proyectos y apuntes sobre datos, IA generativa y producto. Aprender construyendo, con ejemplos propios.
+- [Contacto](https://isabelamrein.github.io/es/contacto/): Contacta con Isabel Amrein De Luca por LinkedIn para comentar un proyecto, una entrada del blog o una posible colaboración en datos, IA y producto.
+
+## English
+
+### Projects
+- [Recycling classifier](https://isabelamrein.github.io/en/projects/recycling-classifier/): A model that, from a photo, says which bin each object goes in. Designed as an educational game to learn how to recycle, built with a no-code tool.
+- [Master's in Data Science and Generative AI](https://isabelamrein.github.io/en/projects/masters-data-science-ai/): What I'm learning in my master's in Data Science and generative AI, class by class, in my own words, with my own examples and small projects to put it to the test.
+
+### Blog
+- [From problem to match: how we would approach finding a home with AI](https://isabelamrein.github.io/en/blog/from-problem-to-match-finding-a-home-with-ai/): A class case study: how to go from a real problem, finding a home, to a data and AI idea with value, a business model and metrics.
+- [Data strategy: purpose first, then the plan](https://isabelamrein.github.io/en/blog/data-strategy-purpose-and-plan/): A data strategy is a purpose plus a plan. How to place an organization by its maturity, and why data only creates value if the people who use it understand it.
+- [Machine learning: when the data writes the rules](https://isabelamrein.github.io/en/blog/machine-learning-data-writes-the-rules/): What machine learning is, how a project is built from start to finish, and why training the model is only the tip of the iceberg.
+
+### About
+- [About](https://isabelamrein.github.io/en/about/): Isabel Amrein De Luca, Lending Product Manager: projects and notes on data, generative AI and product. Learning by building, with my own examples.
+- [Contact](https://isabelamrein.github.io/en/contact/): Contact Isabel Amrein De Luca on LinkedIn to discuss a project, a blog entry or a possible collaboration on data, AI and product.
+
+## Optional
+- [Mapa del sitio](https://isabelamrein.github.io/sitemap.xml)
+- [Texto completo](https://isabelamrein.github.io/llms-full.txt)

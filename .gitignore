@@ -1,0 +1,7 @@
+# Lista blanca: solo se versiona la web ya generada.
+# Cualquier otra cosa que se copie aquí por error queda ignorada y no se sube.
+/*
+!/.gitignore
+!/README.md
+!/docs/
+.DS_Store

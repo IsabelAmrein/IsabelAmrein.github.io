@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Resumen del sitio para modelos de lenguaje: https://isabelamrein.github.io/llms.txt
+Sitemap: https://isabelamrein.github.io/sitemap.xml

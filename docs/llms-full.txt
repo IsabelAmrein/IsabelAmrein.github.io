@@ -1,0 +1,659 @@
+# Isabel Amrein: Del dato al producto
+
+> Isabel Amrein De Luca, Lending Product Manager: proyectos y apuntes sobre datos, IA generativa y producto. Aprender construyendo, con ejemplos propios.
+
+Sitio personal y bilingüe (español e inglés) de Isabel Amrein De Luca, Lending Product Manager. Perfil profesional: https://www.linkedin.com/in/isabel-amrein-de-luca. Contiene proyectos (lo que construye, con su estado, herramientas y resultados) y entradas (apuntes con ejemplos propios).
+
+## Español
+
+### Clasificador de reciclaje
+URL: https://isabelamrein.github.io/es/proyectos/clasificador-reciclaje/
+Resumen: Un modelo que, a partir de una foto, dice a qué contenedor va cada objeto. Pensado como un juego educativo para aprender a reciclar.
+
+## Qué quiero resolver
+
+Casi todos los niños tienen un móvil o una tablet en casa, y apuntar a un objeto y ver la respuesta es una forma de aprender a reciclar jugando. Este proyecto construye ese modelo con una herramienta sin programación, para entender cómo se entrena y dónde falla.
+
+## Cómo lo construyo
+
+1. **Definir las clases.** En España, cuatro: contenedor amarillo (envases de plástico, latas y briks), azul (papel y cartón), verde (vidrio) y resto. Las normas varían según el municipio, así que es un punto de partida.
+2. **Reunir datos.** Unas 50 fotos por clase con objetos de mi casa, variando fondo, luz y ángulo.
+3. **Entrenar y probar** el modelo con objetos nuevos que no haya fotografiado antes.
+4. **Anotar dónde falla y por qué.**
+
+## Qué quiero comprobar
+
+- **Cuánto depende de los datos.** Si todas las fotos tienen el mismo fondo, ¿qué está aprendiendo realmente el modelo?
+- **Qué casos le confunden.** Un brik parece cartón, pero va al contenedor amarillo.
+- **Qué errores cuestan más.** Meter en el amarillo algo que no es reciclable puede estropear el reciclaje del resto, mientras que dejar un envase reciclable en "resto" simplemente lo pierde. Es la lección de diseño de la entrada sobre Machine Learning, con mucho menos riesgo.
+
+## Con qué lo hago
+
+Teachable Machine, una herramienta gratuita de Google que entrena modelos de clasificación de imágenes desde el navegador, sin programar. Corresponde al nivel *Custom AI* de la entrada sobre Machine Learning.
+
+## Resultados
+
+Los publicaré aquí cuando termine las pruebas: cuántas fotos usé por clase, la precisión por clase, los casos que fallan y lo que aprendí.
+
+> Es una herramienta educativa pensada para usar con un adulto cerca. No sustituye las indicaciones oficiales de cada municipio.
+
+### Máster en Data Science e IA generativa
+URL: https://isabelamrein.github.io/es/proyectos/master-data-science-ia/
+Resumen: Lo que voy aprendiendo en mi máster de Data Science e IA generativa, clase a clase, con mis palabras, mis ejemplos y proyectos pequeños para ponerlo a prueba.
+
+## De qué trata
+
+Este proyecto reúne lo que aprendo en mi máster en Data Science e IA generativa. Cada clase se convierte en una entrada: la idea central, un ejemplo mío y, cuando se puede, un proyecto pequeño para ponerla a prueba.
+
+## Cómo lo trabajo
+
+- **Con mis palabras.** Las clases y las presentaciones son mi punto de partida, pero cada entrada se escribe con mis palabras y con ejemplos que construyo yo.
+- **Con proyectos pequeños.** Si no puedo hacer algo pequeño con una idea, probablemente aún no la he entendido. Algunos viven en su propia página, como el [clasificador de reciclaje](https://isabelamrein.github.io/es/proyectos/clasificador-reciclaje/).
+- **Con los errores a la vista.** Lo que sale mal suele enseñar más que lo que sale bien.
+
+### Del problema al match: cómo plantearíamos buscar casa con IA
+URL: https://isabelamrein.github.io/es/blog/del-problema-al-match-buscar-casa-con-ia/
+Resumen: Un caso práctico de clase: cómo pasar de un problema real, buscar casa, a una idea con valor basada en datos e IA, con modelo de negocio y métricas.
+
+Esta clase fue distinta de las anteriores: en vez de escuchar, nos tocó construir. Forma parte del módulo *Business Data and AI Strategy* y fue un **taller de casos de uso con IA**, la sesión de innovación del módulo. Este artículo cuenta el caso desde el problema hasta la propuesta de valor. Es la parte práctica que acompaña a la teoría: el caso seguirá creciendo con las siguientes clases y lo iré enlazando con la teoría que lo explica.
+
+## El caso
+
+El profesor nos planteó un caso realista: una empresa dedicada a la búsqueda de viviendas, que funciona como agencia inmobiliaria. En equipo y sobre una pizarra colaborativa teníamos que levantar el problema, valorar alternativas, proponer una solución con una propuesta de valor basada en el dato y perfilar un plan: cómo lo haríamos y cómo mediríamos el éxito. Terminamos con un mini pitch de cuatro minutos por equipo.
+
+Trabajamos con una versión adaptada del *Lean Canvas*, un lienzo para ordenar una idea de negocio. Se recorre en tres pasos, y me parece una buena forma de ordenar cualquier idea:
+
+
+
+## Paso 1: entender el problema
+
+Partimos del recorrido de una persona que quiere comprar una casa, de la idea a la firma: piensa en comprar, investiga la zona, busca en portales, contacta y concierta visitas, negocia el precio, firma las arras, busca financiación y formaliza la compra ante notario y banco. El profesor señaló dos tramos como el foco del caso: la búsqueda en portales y el contacto para concertar visitas.
+
+
+
+El material planteaba dos puntos de vista: el de quien busca casa y el de la agencia, que pierde contactos de calidad porque no puede atender todas las llamadas y no distingue quién tiene un interés real. Nos quedamos con el primero. A lo largo del recorrido, quien busca se hace preguntas como dónde buscar, cuánto se puede gastar o cuál es el precio justo; los filtros no responden a lo que de verdad quiere saber, la información está repartida entre imágenes y textos, y todo es un proceso manual y reactivo, con una negociación y un papeleo que exigen mucha dedicación. Además, por lo que nos contaron compañeros, buscar casa puede ser una experiencia agotadora: horas comparando y peleando con otras personas por las mismas viviendas. En el lienzo lo resumimos en tres líneas: no hay un portal único de oferta y de información, se pierde mucho tiempo buscando y la experiencia de uso es mala.
+
+¿Y qué hace hoy la gente? Buscar en portales individuales. Es la alternativa que existe, y tiene costes claros: se pierde tiempo, las viviendas aparecen repetidas y hay que llamar una por una.
+
+## Paso 2: diseñar la solución
+
+Nuestra idea fue crear un modelo centralizado que unifique la búsqueda. Algo parecido a esos comparadores que reúnen a muchas empresas y te dan el mejor precio para un billete de tren, pero con las viviendas de varios portales.
+
+La pieza clave es un agente conversacional. En vez de rellenar filtros, la persona habla con él, también por voz, y le cuenta qué busca y cómo vive. Esa conversación es dato no estructurado: el agente lo convierte en variables, las cruza con el catálogo de viviendas y devuelve un **porcentaje de match** con cada una, explicando por qué encaja: «creo que este piso es para ti por esto y esto, y te vas a sentir bien por esto otro».
+
+
+
+Las viviendas llegarían por conexiones API con las plataformas o, si no fuera posible, mediante un modelo de extracción de datos (*scraping*).
+
+Los **objetivos clave** que nos marcamos fueron cuatro:
+
+- Conseguir la confianza del cliente.
+- Modernizar el proceso de búsqueda.
+- Ofrecer un modelo conversacional que dé las alternativas por voz.
+- Convencer de que los pisos ofrecidos están escogidos a su medida.
+
+## La pregunta incómoda del profesor
+
+Aquí llegó el reto: ¿por qué la empresa más grande del sector, que ya tiene herramientas parecidas, querría contratarnos o enviarnos su tráfico? Nuestra respuesta fue darle la vuelta: no íbamos a vendérselo a ella. Como domina casi todo el mercado, nos pusimos del lado de las pequeñas: juntarlas en una plataforma donde todas pudieran convivir y competir con más fuerza.
+
+## Paso 3: convertirla en negocio
+
+### La propuesta de valor
+
+Ahorrar tiempo y mejorar la experiencia de búsqueda con una hiperpersonalización unificada y con servicios extra. Son tres ideas:
+
+- **Hiperpersonalización.** Con las fotos de las plataformas generamos un render 3D realista y lo ambientamos según lo que la persona nos ha contado. Si busca casa para vivir con hijos, perro y su suegra, la vivienda se adapta a esas necesidades para que se imagine viviendo allí; si es soltera y quiere compartir con amigos, el render muestra otro uso. Verse en la casa aumenta el interés.
+- **Unificación.** Reunimos la oferta y damos el porcentaje de match. Además, gestionamos el contacto: si alguien ve una vivienda a través de nuestra aplicación, enviamos nosotros un mensaje ya preparado a la plataforma, a la inmobiliaria o al particular para pedir una visita.
+- **Servicios extra.** Cuando alguien ya está decidido y le ha gustado su render, podemos ofrecerle una empresa de reformas que le dé buen precio según el estilo de la casa, orientación legal y financiera (cuánto va a costar de verdad, qué conviene saber de las arras o de los seguros de hipoteca) y enlace con brokers de hipotecas.
+
+### A quién va dirigida
+
+A dos públicos: personas que buscan piso para comprar, porque la idea es para venta, y los pequeños portales inmobiliarios que quieran unirse para dar un servicio conjunto.
+
+### Dos retos
+
+Nos planteamos dos preguntas difíciles. La primera, **cómo agrupar la oferta**: con acuerdos con plataformas, brokers y publicidad, un modelo B2B. La segunda, **cómo rentabilizarlo**. Por un lado, ingresos de reformas, brokers y servicios legales; por otro, una suscripción para quien busca casa. Una búsqueda dura unos tres o cuatro meses, hasta que se compra, y mucha gente se suscribe a un asistente de IA para un trabajo concreto y luego se da de baja. Aquí sería igual: se paga mientras dura la búsqueda y se obtiene todo el servicio personalizado. Con los portales, los acuerdos serían por el tráfico que les enviamos, por contactos o por suscripción; eso quedó por definir.
+
+### El concepto general
+
+En una línea: un pacto con los pequeños portales y un agente de IA multimodal que habla con el cliente y trae toda la información. Detrás hay un sistema de recomendación, conexión por API con los portales, los datos del usuario compilados, los datos de cada portal y un modelo de IA que aprende de las búsquedas que acaban bien. En la pizarra apuntamos una idea más: un asistente formado por subagentes, según la fase en la que se encuentre quien compra.
+
+### Cómo mediríamos el éxito
+
+El profesor nos dio tres miradas de partida: la de la persona que busca (tiempo de búsqueda, número de visitas físicas y satisfacción), la de la agencia (contactos de calidad y operaciones cerradas) y la de la empresa (ingresos y base de usuarios). Nosotros nos quedamos con tres métricas:
+
+- **Tráfico de clientes**, orgánico y de pago: cómo conseguimos que la gente entre en la plataforma.
+- **Conversión vía API**: de las personas con las que hablamos y a las que damos matches, cuántas enviamos a una plataforma y cierran una visita en persona. Como estamos conectados por API, los portales nos informan; esa visita es nuestra conversión, y la compra sería un extra.
+- **Satisfacción**: una encuesta al terminar la conversación.
+
+## La pieza que falta: partir también del dato
+
+En los anexos de la presentación había una idea que me pareció útil para este caso. El diseño de producto tradicional empieza por la persona y su problema, que es justo lo que hicimos. Pero hay otra puerta de entrada: empezar por el **dato como activo** y buscar dónde encaja. Se resume en unas pocas preguntas: qué datos tenemos y de qué calidad son, si son únicos o nos darían un posicionamiento diferencial, en qué procesos de nuestro cliente podrían serle útiles y si pueden producir una experiencia diferente a la actual. Y un aviso importante: el proceso no es lineal, se va y se vuelve entre explorar, encajar, idear, ejecutar y evaluar. La fuente que citaba la presentación es *The Design Thinking Playbook*.
+
+Si lo aplico a nuestro caso, los activos serían las conversaciones con las personas que buscan, el catálogo de las plataformas y sus fotografías: con ellos se hacen el match y el render.
+
+## Lo que me llevo
+
+- **Primero el problema, después la tecnología.** La idea solo tiene sentido porque el dolor es real: las horas que se pierden buscando casa.
+- **Una buena pregunta cambia el enfoque.** «¿Por qué la grande querría trabajar con vosotros?» nos hizo pasar de competir con ella a unir a las pequeñas.
+- **Se puede empezar por el problema o por el dato.** Conviene hacer las dos cosas, porque el camino no es lineal.
+- **Una idea de IA es también una idea de negocio.** Sin ingresos y sin métricas, se queda en un prototipo. Y todo se apoya en el dato: de la conversación a las variables, de las variables al match y del match a la conversión.
+
+El caso continúa en las siguientes clases.
+
+### Estrategia de datos: primero el propósito, después el plan
+URL: https://isabelamrein.github.io/es/blog/estrategia-de-datos-proposito-y-plan/
+Resumen: Una estrategia de datos es un propósito más un plan. Cómo situar una organización según su madurez y por qué el dato solo genera valor si lo entiende quien lo usa.
+
+Esta clase me costó al principio: durante la primera parte no tenía claro a dónde queríamos llegar. Al final todo encajó y me dejó una idea que sirve igual para un proyecto que para un equipo entero: antes de hablar de datos, hay que saber para qué.
+
+## Empezar por el destino
+
+Rafael abrió la clase con una frase de Séneca que me quedé apuntando:
+
+> No hay viento favorable para el que no sabe dónde va.
+
+Todo proyecto, sea de un equipo o de una empresa entera, empieza con un objetivo. Una estrategia, nos explicó, es un propósito más un plan. El propósito define qué valor queremos generar y cómo lo mediremos; el plan lo convierte en acciones. El camino completo pasa por siete paradas, y esta clase se centró en las dos del medio: diagnosticar dónde estamos y diseñar cómo llegar.
+
+
+
+## Organizaciones data-driven
+
+Una organización *data-driven* pone el dato en el centro de sus decisiones. Lo que más me gustó es que el punto de partida no es la tecnología, sino la pregunta: saben formular las preguntas de negocio adecuadas para responderlas con datos. Estas son las características que más se repiten, contadas con mis palabras:
+
+- La mayor parte de su valor sale del uso de los datos, y saben medirlo.
+- Se hacen preguntas de negocio que los datos puedan contestar.
+- Tienen los datos listos para usarse, no atrapados en silos.
+- Cuidan el talento de datos que ya tienen dentro.
+- Ofrecen al cliente una experiencia diferente: productos, precios y comunicación personalizados, y capacidad de anticiparse.
+- Usan la IA agéntica como acelerador.
+
+## ¿En qué punto estamos? Control, optimización y transformación
+
+La parte que más me hizo pensar fue un esquema para situar una estrategia de datos según su madurez analítica y su ambición. Este es mi dibujo de la idea:
+
+
+
+Las tres zonas no son mejores o peores, son etapas, y cada una pide cosas distintas. Lo incómodo fue aplicármelo: pensé en proyectos míos que creía bastante avanzados y que quizá aún no han dado el salto que necesitan para pasar de una zona a la siguiente.
+
+## Un ejemplo: pedir un préstamo para un coche
+
+Para bajarlo a tierra, Rafael usó el recorrido de una persona que pide un préstamo para comprar un coche. Como trabajo en financiación al consumo, lo reconocí enseguida. Son seis momentos y cada uno usa datos distintos: fijar los objetivos estratégicos, lanzar una campaña de préstamos personales, recibir la solicitud, decidir el riesgo y el precio, desembolsar el préstamo y, por último, reportar al supervisor y medir los resultados.
+
+La conclusión es que no basta con tener buenos datos en cada paso. Hace falta un **modelo de datos** que conecte todos los pasos y que todos los equipos entiendan igual. Ahí quería llegar toda la clase.
+
+## Del diagnóstico al plan: dos herramientas
+
+Para pasar de la teoría a la práctica, Rafael nos presentó dos herramientas del Club de CDOs Spain&Latam, creadas por responsables de datos de distintos sectores:
+
+- **dataMat, el diagnóstico.** Una encuesta de 105 preguntas, cinco por cada uno de los 21 ámbitos del mundo del dato. Cada empresa la responde con honestidad y recibe una puntuación en cada ámbito, para ver en qué punto se encuentra.
+- **dataToolkit, el juego de tarjetas.** Una tarjeta por cada uno de esos 21 ámbitos, que nos regaló en clase. En cada una te sitúas en uno de tres niveles: un punto si estás muy mal, dos si estás regular y tres si estás bien.
+
+Un ejemplo con el diccionario y glosario del dato:
+
+
+
+Me gustó pensar en esto como un roadmap: el diagnóstico te dice dónde fallas y el plan te ordena los pequeños cambios para mejorar paso a paso.
+
+## Lo que me llevo a mi trabajo
+
+**Revisar el modelo de datos de un área.** Los modelos de datos alimentan análisis, dashboards, modelos predictivos y de riesgo, y los datos suelen llegar desde tecnología para transformarse en inteligencia de negocio. Una buena pregunta es si el modelo de un área cumpliría esos 21 ámbitos. Es difícil extrapolarlo a una empresa entera, pero empezar por lo pequeño, un modelo bien hecho para un área, importa mucho: ayuda a que las tablas se entiendan entre sí y a que la IA pueda relacionarlas y construir modelos coherentes.
+
+**Acercar el dato a todo el mundo.** Rafael insistió en que, en una empresa data-driven, incluso quien no usa datos a diario necesita entender qué pasa en la organización. Y hay que explicárselo en su idioma: no se habla de datos igual en todos los equipos. Generar esa cultura del dato, a un nivel que cada persona pueda manejar, es una parte esencial del trabajo.
+
+**Un proyecto que me gustaría hacer.** Acercar los datos a las personas con las que trabajo, con tres ideas:
+
+- **Un modelo de datos propio para cada grupo**, con sus necesidades y un vocabulario que entendamos todos.
+- **Una vista sencilla e individual**, que cada persona pueda consultar para entender su día a día y que también le motive.
+- **Escuchar antes de construir**: hablar con personas de perfiles distintos, desde quienes mejor rinden hasta quienes necesitan más apoyo, para entender qué necesitan y qué les motiva.
+
+## Ecosistema, la palabra clave
+
+Si me quedo con una palabra de la clase es ecosistema. El salto a la transformación llega cuando los modelos de datos se relacionan de forma óptima y generan un ecosistema en el que los datos de cada área alimentan a las demás.
+
+## Lo que me llevo
+
+Antes de elegir tecnología, hay que tener claro el para qué. Después, diagnosticar con honestidad en qué punto estamos y construir un plan pequeño y repetible. Y recordar que el dato solo genera valor si lo entiende quien lo usa.
+
+### Machine Learning: cuando los datos escriben las reglas
+URL: https://isabelamrein.github.io/es/blog/machine-learning-datos-escriben-reglas/
+Resumen: Qué es el Machine Learning, cómo se construye un proyecto de principio a fin y por qué entrenar el modelo es solo la punta del iceberg.
+
+Mi primera clase de Data Science e IA generativa respondió a una pregunta que parece obvia hasta que intentas explicarla: ¿qué es exactamente el Machine Learning? Estos son mis apuntes, reescritos con mis propios ejemplos, y un proyecto aparte con el que lo pongo a prueba.
+
+## Qué es y dónde encaja
+
+La Inteligencia Artificial es el campo amplio: conseguir que las máquinas hagan cosas que asociamos con la inteligencia. El Machine Learning (ML) es una de sus ramas: en lugar de decirle al ordenador qué hacer paso a paso, le das ejemplos y dejas que descubra los patrones por su cuenta.
+
+La Data Science es el oficio que lo rodea. Combina estadística, programación y conocimiento del problema para entender los datos, predecir y tomar mejores decisiones.
+
+## La idea que más me quedó: la receta de galletas
+
+Mi profesor, Daniel Sáenz, lo explicó con una receta de galletas y es la imagen que más se me quedó. Imagina que quieres hacer galletas:
+
+- **Programación tradicional:** tienes los ingredientes y escribes tú la receta, es decir, las reglas. Si sigues los pasos, salen las galletas, que son las respuestas.
+- **Machine Learning:** tienes los ingredientes y también las galletas ya hechas. Es el algoritmo quien se inventa la receta que lleva de unos a otras. Esa receta, aprendida a partir de ejemplos, es el modelo.
+
+
+
+La diferencia está en quién escribe las reglas. En el primer caso, tú. En el segundo, los datos.
+
+Un ejemplo cotidiano en cualquier empresa: la bandeja de entrada de atención al cliente. Llegan cientos de correos al día y hay que repartirlos entre reclamaciones, consultas, solicitudes de documentación y bajas.
+
+- **Con reglas:** escribes "si el correo contiene *reclamación*, va al equipo de reclamaciones". Funciona hasta que un cliente enfadado escribe sin usar esa palabra, o mezcla dos temas en un mismo mensaje. Cada excepción obliga a añadir otra regla a mano.
+- **Con ML:** le enseñas miles de correos que los agentes ya clasificaron. El modelo aprende qué rasgos suelen acompañar a cada categoría (el vocabulario, el tono, lo que se pide) y se adapta si le das ejemplos nuevos.
+
+Eso sí, esos correos contienen datos personales, así que antes de entrenar habría que anonimizarlos.
+
+## Cuatro usos que se repiten
+
+**Recomendación.** Imagina una cadena de cines. Si sé que a un cliente le gustan los estrenos de un género y suele ir los viernes, puedo avisarle de que esta semana llega una película de ese género, con asientos libres en la zona que suele elegir. Incluso podría destacar en el aviso al actor que más veces ha visto. Eso sí, con su permiso: personalizar bien también es respetar la privacidad.
+
+**Estrategia de juegos.** Hay modelos que ajustan la dificultad al nivel de cada jugador para que el reto sea exigente pero nunca imposible. A veces la diferencia está en milímetros.
+
+**Clasificación.** Volviendo a atención al cliente: un modelo que lee cada correo y lo envía al equipo adecuado, para que nadie pierda tiempo reenviando. Un ejemplo más serio son los modelos que ayudan a detectar neumonía en radiografías de tórax, que se desplegaron en entornos clínicos durante la pandemia.
+
+**Predicción.** [Flood Hub, de Google](https://blog.google/outreach-initiatives/sustainability/flood-hub-ai-flood-forecasting-more-countries/), pronostica crecidas de ríos hasta siete días antes combinando previsiones meteorológicas e imágenes de satélite. Empezó como piloto en India en 2018, con unas 48 horas de margen. Una semana de aviso permite que la gente se ponga a salvo.
+
+## Cómo se construye un proyecto: la montaña que hay que escalar
+
+Antes de empezar a escalar hay que saber a dónde vas: qué quiero predecir y qué decisión voy a tomar con ello. A partir de ahí, el camino tiene tres tramos y el modelo ocupa solo el del medio. Este es mi mapa, con lo que hay que vigilar en cada uno:
+
+
+
+Y ahora, los obstáculos de cada tramo, contados como me los explicaría a mí misma.
+
+### Primer tramo: los datos
+
+Todo empieza con los datos, y casi nunca llegan listos. El primer problema que te encuentras es que están incompletos o son inconsistentes: huecos, duplicados, fechas escritas de tres formas distintas. Lo siguiente es que hay pocos ejemplos etiquetados, porque alguien tiene que ponerles a mano la respuesta correcta. Y por último, que suelen estar desequilibrados: en los correos de atención al cliente habrá muchas más consultas que reclamaciones, y el modelo puede acabar ignorando lo poco frecuente.
+
+La solución es dedicar tiempo al preprocesamiento. Primero, perfilar los datos para entender qué hay. Después, limpiarlos, quedarse solo con lo que aporta, transformarlos a un formato que el modelo entienda, enriquecerlos con información extra y, al final, validar que el resultado tiene sentido. No es la parte más vistosa, pero de ella depende todo lo demás.
+
+### Segundo tramo: construir y entrenar
+
+Con los datos listos toca entrenar, y aquí aparecen cuatro problemas clásicos.
+
+El primero es elegir el algoritmo. Hay muchos y ninguno es el mejor para todo, así que lo sensato es probar varios, comparar sus resultados con métricas como la precisión o el recall y tener en cuenta qué tipo de problema es: clasificar, predecir un número o agrupar.
+
+El segundo es el sobreajuste: el modelo se aprende tan bien los ejemplos de entrenamiento que falla con los nuevos. Para evitarlo se separan los datos en entrenamiento, validación y prueba, se aplican técnicas que frenan la complejidad del modelo (la regularización) y, si se puede, se consiguen más datos.
+
+El tercero son los hiperparámetros, los ajustes que el modelo no aprende por sí solo. Probarlos a mano es eterno, así que se automatiza la búsqueda con técnicas como Grid Search o Random Search.
+
+Y el cuarto es la potencia de cálculo: entrenar modelos grandes pide mucha máquina. Se resuelve alquilando procesadores especializados en la nube y repartiendo el entrenamiento en lotes pequeños.
+
+### Tercer tramo: desplegar y mantener
+
+Cuando el modelo funciona en el portátil empieza lo difícil. El primer problema es integrarlo con los sistemas que ya existen, que hablan otros formatos y otras tecnologías. Lo habitual es ofrecerlo como un servicio al que otras aplicaciones puedan llamar, documentando bien qué entra y qué sale.
+
+El segundo es que el rendimiento se degrada con el tiempo, porque el mundo cambia y los datos nuevos ya no se parecen a los de entrenamiento. La solución es monitorizar la precisión y el recall de forma continua, con alertas automáticas, y reentrenar el modelo con datos recientes.
+
+Hay dos más que conviene no olvidar: aguantar un gran volumen de peticiones sin ir más lento (con servicios en la nube que escalan solos) y asegurarse de que el modelo no trata injustamente a ciertos grupos, que es justo el siguiente tema.
+
+## Gobierno del modelo: lo que no se puede olvidar
+
+Más allá de los problemas técnicos, hay tres pilares que sostienen un proyecto serio.
+
+**Trazabilidad.** Dejar registrado cada paso, desde los datos hasta el despliegue, con herramientas como MLflow. Si el modelo empieza a fallar, permite volver atrás y ver qué cambió: ¿los datos?, ¿algún ajuste? Y también explicar por qué se tomó una decisión.
+
+**Equidad (*fairness*).** Comprobar que el modelo no trata peor a ciertos grupos ni repite los sesgos de los datos. Si el modelo de correos atendiera antes a quien escribe con tono formal y dejara para el final a quien comete faltas de ortografía, sería injusto. Se mide con métricas específicas, auditorías periódicas y, en casos críticos, con una persona que revise.
+
+**Monitorización continua.** Vigilar el modelo en producción para detectar cuándo los datos cambian y deja de acertar, lo que se conoce como *concept drift*. Un recomendador de películas se queda anticuado cuando cambian las modas.
+
+## Entrenar el modelo es solo la punta del iceberg
+
+Al empezar pensaba que el trabajo era sobre todo escribir el código del modelo, y es una parte pequeña. Alrededor hay que recoger y verificar los datos, extraer sus características, gestionar la configuración y los recursos de computación, tener herramientas de análisis, montar la infraestructura que sirve el modelo y vigilarlo cuando ya está en marcha.
+
+
+
+La idea viene de un conocido artículo de Google de 2015, [*Hidden Technical Debt in Machine Learning Systems*](https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf), que advierte de que los sistemas de ML acumulan costes de mantenimiento a la larga. Por eso investigar y producir son mundos distintos: en investigación importa sobre todo el rendimiento del modelo, mientras que en producción pesan igual la velocidad de respuesta, que los datos no dejan de cambiar, la equidad y poder explicar las decisiones.
+
+## Tres formas de construir un modelo
+
+Por suerte no hace falta escalar toda la montaña desde cero en cada proyecto. En clase vimos tres niveles, de menos a más trabajo. Cuanto más abajo del iceberg te metes, más control tienes y más tienes que sostener.
+
+
+
+Una API te ahorra casi todo lo que hay bajo el agua. Un proyecto end-to-end te lo pone todo en las manos.
+
+## Lo llevo a la práctica
+
+Para ponerlo a prueba estoy construyendo un clasificador de reciclaje con Teachable Machine, la herramienta del nivel Custom AI: una foto de un objeto y la respuesta de a qué contenedor va. Tiene su propia página, con el plan, las pruebas y los resultados: [Clasificador de reciclaje](https://isabelamrein.github.io/es/proyectos/clasificador-reciclaje/).
+
+## Un proyecto que no voy a construir (y qué enseña)
+
+Mi primera idea fue un clasificador de setas: comestible o venenosa. La he descartado como aplicación a propósito. Un modelo entrenado con unas cuantas fotos se equivocará, y en este problema los errores no cuestan lo mismo. Decir "comestible" de una seta tóxica puede ser mortal. Decir "tóxica" de una comestible solo cuesta una cena.
+
+Por eso importa mirar algo más que el porcentaje total de aciertos. Aquí la métrica clave sería el *recall*: de todas las setas tóxicas, ¿cuántas consigue señalar el modelo como tóxicas? Además, muchas setas venenosas se parecen mucho a las comestibles y su identificación segura la hace una persona experta, no una foto.
+
+La lección es de diseño: elegir la métrica adecuada y pensar en el contexto de uso forma parte de construir un modelo. Cuando hay riesgo real, el modelo asiste a una persona, no decide por ella. Y, por si acaso: nunca uses un modelo de fotos para decidir qué comer.
+
+## Lo que me llevo
+
+El Machine Learning no es magia ni algo reservado a expertos. Es una forma distinta de resolver problemas en la que pesan más la calidad de los datos y el mantenimiento que el algoritmo en sí, y entrenar el modelo es solo la punta del iceberg. Puedes seguir cómo me va con el clasificador en [su página de proyecto](https://isabelamrein.github.io/es/proyectos/clasificador-reciclaje/).
+
+## English
+
+### Recycling classifier
+URL: https://isabelamrein.github.io/en/projects/recycling-classifier/
+Resumen: A model that, from a photo, says which bin each object goes in. Designed as an educational game to learn how to recycle, built with a no-code tool.
+
+## What I want to solve
+
+Almost every child has a phone or tablet at home, and pointing at an object and seeing the answer is a way to learn recycling through play. This project builds that model with a no-code tool, to understand how it is trained and where it fails.
+
+## How I build it
+
+1. **Define the classes.** In Spain, four: yellow bin (plastic packaging, cans and cartons), blue (paper and cardboard), green (glass) and general waste. Rules vary by municipality, so this is a starting point.
+2. **Gather data.** About 50 photos per class using objects from my home, varying background, light and angle.
+3. **Train and test** the model with new objects I haven't photographed before.
+4. **Note where it fails and why.**
+
+## What I want to check
+
+- **How much it depends on the data.** If every photo has the same background, what is the model really learning?
+- **Which cases confuse it.** A carton looks like cardboard, but it goes in the yellow bin.
+- **Which mistakes cost more.** Putting something non-recyclable in the yellow bin can spoil the recycling of everything else, whereas leaving a recyclable package in general waste simply loses it. It's the design lesson from the machine learning entry, with much less risk.
+
+## What I use
+
+Teachable Machine, a free Google tool that trains image classification models in the browser, no coding needed. It corresponds to the *Custom AI* level in the machine learning entry.
+
+## Results
+
+I'll publish them here once the tests are done: how many photos I used per class, the accuracy per class, the cases that fail and what I learned.
+
+> It's an educational tool meant to be used with an adult nearby. It doesn't replace each municipality's official guidance.
+
+### Master's in Data Science and Generative AI
+URL: https://isabelamrein.github.io/en/projects/masters-data-science-ai/
+Resumen: What I'm learning in my master's in Data Science and generative AI, class by class, in my own words, with my own examples and small projects to put it to the test.
+
+## What it's about
+
+This project collects what I learn in my master's in Data Science and generative AI. Each class becomes an entry: the core idea, an example of my own and, when possible, a small project to put it to the test.
+
+## How I work
+
+- **In my own words.** Classes and slides are my starting point, but every entry is written in my own words, with examples I build myself.
+- **With small projects.** If I can't build something small with an idea, I probably haven't understood it yet. Some live on their own page, like the [recycling classifier](https://isabelamrein.github.io/en/projects/recycling-classifier/).
+- **With mistakes in plain sight.** What goes wrong usually teaches more than what goes right.
+
+### From problem to match: how we would approach finding a home with AI
+URL: https://isabelamrein.github.io/en/blog/from-problem-to-match-finding-a-home-with-ai/
+Resumen: A class case study: how to go from a real problem, finding a home, to a data and AI idea with value, a business model and metrics.
+
+This class was different from the earlier ones: instead of listening, we had to build. It is part of the *Business Data and AI Strategy* module and it was an **AI use case workshop**, the innovation session of the module. This article tells the case from the problem to the value proposition. It is the practical side that goes with the theory: the case will keep growing with the next classes and I will link it to the theory that explains it.
+
+## The case
+
+The teacher gave us a realistic case: a company dedicated to finding homes, working as an estate agency. As a team, on a collaborative whiteboard, we had to identify the problem, weigh alternatives, propose a solution with a value proposition based on data and outline a plan: how we would do it and how we would measure success. We finished with a four-minute mini pitch per team.
+
+We worked with an adapted version of the *Lean Canvas*, a canvas for organising a business idea. It is worked through in three steps, and I think it is a good way to organise any idea:
+
+
+
+## Step 1: understand the problem
+
+We started from the journey of a person who wants to buy a home, from the idea to the signature: they think about buying, research the area, search portals, get in touch and book viewings, negotiate the price, sign the deposit contract, look for financing and complete the purchase at the notary and the bank. The teacher marked two stretches as the focus of the case: searching portals and getting in touch to book viewings.
+
+
+
+The material raised two points of view: the home seeker's and the agency's, which loses quality leads because it cannot answer every call and cannot tell who is really interested. We chose the first. Along the journey, the seeker asks things like where to search, how much they can spend or what the fair price is; the filters do not answer what they really want to know, the information is scattered across images and texts, and everything is a manual and reactive process, with negotiation and paperwork that demand a lot of dedication. On top of that, from what classmates told us, searching for a home can be exhausting: hours comparing and fighting other people for the same properties. On the canvas we summed it up in three lines: there is no single portal for listings and information, a lot of time is lost searching, and the user experience is poor.
+
+And what do people do today? Search on individual portals. It is the alternative that exists, and it has clear costs: time is lost, properties show up repeated and you have to call one by one.
+
+## Step 2: design the solution
+
+Our idea was to create a centralised model that unifies the search. Something like those comparison sites that bring many companies together and give you the best price for a train ticket, but with homes from several portals.
+
+The key piece is a conversational agent. Instead of filling in filters, the person talks to it, voice included, and tells it what they are looking for and how they live. That conversation is unstructured data: the agent turns it into variables, matches them against the catalogue of homes and returns a **match percentage** for each one, explaining why it fits: "I think this flat is for you because of this and this, and you will feel good about this other thing".
+
+
+
+The homes would arrive through API connections with the platforms or, if that were not possible, through a data extraction model (*scraping*).
+
+We set four **key objectives**:
+
+- Win the customer's trust.
+- Modernise the search process.
+- Offer a conversational model that gives alternatives by voice.
+- Convince people that the homes offered are chosen to suit them.
+
+## The teacher's uncomfortable question
+
+Here came the challenge: why would the biggest company in the sector, which already has similar tools, want to hire us or send us its traffic? Our answer was to turn it around: we were not going to sell it to them. Since they dominate almost the whole market, we sided with the small ones: bringing them together on one platform where all of them could coexist and compete with more strength.
+
+## Step 3: turn it into a business
+
+### The value proposition
+
+Save time and improve the search experience with a unified hyper-personalisation with extra services. There are three ideas:
+
+- **Hyper-personalisation.** With the photos from the platforms we generate a realistic 3D render and stage it according to what the person has told us. If they are looking for a home to live in with children, a dog and their mother-in-law, the property adapts to those needs so they can imagine living there; if they are single and want to share with friends, the render shows another use. Seeing yourself in the home increases interest.
+- **Unification.** We bring the listings together and give the match percentage. We also handle the contact: if someone sees a property through our app, we send a ready-made message to the platform, the agency or the private seller to request a viewing.
+- **Extra services.** When someone is already decided and liked their render, we can offer a renovation company that gives a good price for the style of the home, legal and financial guidance (what it will really cost, what is worth knowing about deposits or mortgage insurance) and a link to mortgage brokers.
+
+### Who it is for
+
+Two audiences: people looking for a flat to buy, because the idea is for sales, and the small property portals that want to join forces to offer a shared service.
+
+### Two challenges
+
+We raised two hard questions. The first, **how to bring the supply together**: with agreements with platforms, brokers and advertising, a B2B model. The second, **how to make it profitable**. On one side, income from renovations, brokers and legal services; on the other, a subscription for people searching for a home. A search lasts about three or four months, until you buy, and many people subscribe to an AI assistant for a specific piece of work and then cancel. Here it would be the same: you pay while the search lasts and get the whole personalised service. With the portals, agreements would be based on the traffic we send them, on leads or on subscription; that was left to define.
+
+### The high-level concept
+
+In one line: a pact with the small portals and a multimodal AI agent that talks to the customer and brings all the information. Behind it there is a recommendation system, API connections with the portals, the user's compiled data, each portal's data and an AI model that learns from the searches that end well. On the whiteboard we noted one more idea: an assistant made of sub-agents, depending on the stage the buyer is at.
+
+### How we would measure success
+
+The teacher gave us three starting points of view: the person searching (search time, number of physical viewings and satisfaction), the agency (quality leads and closed deals) and the company (revenue and user base). We kept three metrics:
+
+- **Customer traffic**, organic and paid: how we get people to enter the platform.
+- **Conversion via API**: of the people we talk to and give matches to, how many we send to a platform and close an in-person viewing. Since we are connected by API, the portals tell us; that viewing is our conversion, and the purchase would be an extra.
+- **Satisfaction**: a survey at the end of the conversation.
+
+## The missing piece: starting from the data too
+
+In the annexes of the presentation there was an idea I found useful for this case. Traditional product design starts from the person and their problem, which is exactly what we did. But there is another way in: start from the **data as an asset** and look for where it fits. It boils down to a few questions: what data do we have and how good is it, is it unique or would it give us a differentiating position, in which of our customer's processes could it be useful, and can it produce an experience different from today's. And an important warning: the process is not linear, you go back and forth between exploring, fitting, ideating, executing and evaluating. The source cited in the presentation is *The Design Thinking Playbook*.
+
+Applying it to our case, the assets would be the conversations with the people searching, the platforms' catalogue and their photographs: with them we build the match and the render.
+
+## What I take away
+
+- **Problem first, technology second.** The idea only makes sense because the pain is real: the hours lost searching for a home.
+- **A good question changes the approach.** "Why would the big one want to work with you?" made us go from competing with it to uniting the small ones.
+- **You can start from the problem or from the data.** It pays to do both, because the path is not linear.
+- **An AI idea is also a business idea.** Without income and metrics, it stays a prototype. And everything rests on data: from conversation to variables, from variables to match and from match to conversion.
+
+The case continues in the next classes.
+
+### Data strategy: purpose first, then the plan
+URL: https://isabelamrein.github.io/en/blog/data-strategy-purpose-and-plan/
+Resumen: A data strategy is a purpose plus a plan. How to place an organization by its maturity, and why data only creates value if the people who use it understand it.
+
+This class was hard for me at first: during the first part I wasn't clear on where we were heading. In the end everything clicked, and it left me with an idea that works as well for a single project as for a whole team: before talking about data, you have to know what it's for.
+
+## Starting with the destination
+
+Rafael opened the class with a quote from Seneca that I jotted down:
+
+> There is no favourable wind for those who don't know where they're going.
+
+Every project, whether for a team or a whole company, starts with an objective. A strategy, he explained, is a purpose plus a plan. The purpose defines what value we want to create and how we'll measure it; the plan turns it into actions. The full path goes through seven stops, and this class focused on the two in the middle: diagnosing where we are and designing how to get there.
+
+
+
+## Data-driven organizations
+
+A *data-driven* organization puts data at the centre of its decisions. What I liked most is that the starting point isn't technology but the question: they know how to ask the right business questions so they can answer them with data. These are the traits that come up most, in my own words:
+
+- Most of their value comes from using data, and they know how to measure it.
+- They ask business questions that data can answer.
+- Their data is ready to use, not trapped in silos.
+- They nurture the data talent they already have inside.
+- They offer customers a different experience: personalized products, prices and communication, and the ability to anticipate.
+- They use agentic AI as an accelerator.
+
+## Where are we? Control, optimization and transformation
+
+The part that made me think most was a diagram for placing a data strategy according to its analytical maturity and its ambition. This is my drawing of the idea:
+
+
+
+The three zones aren't better or worse, they're stages, and each asks for different things. What was uncomfortable was applying it to myself: I thought of projects of mine that I believed were quite advanced and that may not yet have made the leap they need to move from one zone to the next.
+
+## An example: applying for a car loan
+
+To bring it down to earth, Rafael used the journey of a person applying for a loan to buy a car. Since I work in consumer finance, I recognised it right away. There are six moments and each uses different data: setting the strategic objectives, launching a personal loans campaign, receiving the application, deciding risk and price, disbursing the loan and, finally, reporting to the supervisor and measuring results.
+
+The takeaway is that having good data at each step isn't enough. You need a **data model** that connects all the steps and that every team understands in the same way. That's where the whole class was heading.
+
+## From diagnosis to plan: two tools
+
+To move from theory to practice, Rafael introduced two tools from the CDO Club Spain&Latam, created by data leaders from different industries:
+
+- **dataMat, the diagnosis.** A survey of 105 questions, five for each of the 21 areas of the data world. Each company answers it honestly and gets a score in each area, to see where it stands.
+- **dataToolkit, the card game.** One card for each of those 21 areas, which he gave us in class. On each one you place yourself at one of three levels: one point if you're in a bad place, two if you're so-so, and three if you're doing well.
+
+An example with the data dictionary and glossary:
+
+
+
+I liked thinking of this as a roadmap: the diagnosis tells you where you're failing and the plan orders the small changes to improve step by step.
+
+## What I take to my work
+
+**Review the data model of an area.** Data models feed analyses, dashboards, predictive models and risk models, and the data usually arrives from technology to be turned into business intelligence. A good question is whether an area's model would meet those 21 areas. It's hard to extrapolate to a whole company, but starting small, one well-built model for one area, matters a lot: it helps tables make sense together and lets AI relate them and build coherent models.
+
+**Bring data closer to everyone.** Rafael insisted that, in a data-driven company, even people who don't use data every day need to understand what is happening in the organization. And it has to be explained in their language: you don't talk about data the same way in every team. Building that data culture, at a level each person can handle, is an essential part of the job.
+
+**A project I'd like to do.** Bring data closer to the people I work with, with three ideas:
+
+- **A data model of their own for each group**, with their needs and a vocabulary we all understand.
+- **A simple, individual view** that each person can check to understand their day-to-day and that also keeps them motivated.
+- **Listen before building**: talk to people with different profiles, from those who perform best to those who need more support, to understand what they need and what motivates them.
+
+## Ecosystem, the keyword
+
+If I take one word from the class, it's ecosystem. The leap to transformation comes when data models relate to each other in the best possible way and create an ecosystem where each area's data feeds the others.
+
+## What I take away
+
+Before choosing technology, you have to be clear about what it's for. Then, diagnose honestly where we are and build a small, repeatable plan. And remember that data only creates value if the person using it understands it.
+
+### Machine learning: when the data writes the rules
+URL: https://isabelamrein.github.io/en/blog/machine-learning-data-writes-the-rules/
+Resumen: What machine learning is, how a project is built from start to finish, and why training the model is only the tip of the iceberg.
+
+My first Data Science and generative AI class answered a question that seems obvious until you try to explain it: what exactly is machine learning? These are my notes, rewritten with my own examples, and a separate project where I put it to the test.
+
+## What it is and where it fits
+
+Artificial Intelligence is the broad field: getting machines to do things we associate with intelligence. Machine learning (ML) is one of its branches: instead of telling the computer what to do step by step, you give it examples and let it discover the patterns on its own.
+
+Data Science is the craft around it. It combines statistics, programming and knowledge of the problem to understand data, make predictions and take better decisions.
+
+## The idea that stuck with me: the cookie recipe
+
+My instructor, Daniel Sáenz, explained it with a cookie recipe, and it's the image that stuck with me most. Imagine you want to bake cookies:
+
+- **Traditional programming:** you have the ingredients and you write the recipe yourself, that is, the rules. Follow the steps and cookies come out: the answers.
+- **Machine learning:** you have the ingredients and also the finished cookies. The algorithm is the one that invents the recipe that gets you from one to the other. That recipe, learned from examples, is the model.
+
+
+
+The difference is who writes the rules. In the first case, you. In the second, the data.
+
+An everyday example in any company: the customer service inbox. Hundreds of emails arrive every day and they have to be split into complaints, enquiries, document requests and cancellations.
+
+- **With rules:** you write "if the email contains *complaint*, it goes to the complaints team". It works until an angry customer writes without using that word, or mixes two topics in one message. Every exception means adding another rule by hand.
+- **With ML:** you show it thousands of emails that agents have already sorted. The model learns which features tend to go with each category (the vocabulary, the tone, what is being asked) and adapts when you give it new examples.
+
+Of course, those emails contain personal data, so they would have to be anonymised before training.
+
+## Four uses that keep showing up
+
+**Recommendation.** Picture a cinema chain. If I know a customer likes releases from a certain genre and usually goes on Fridays, I can tell them a film of that genre is coming this week, with free seats in the area they usually pick. I could even feature the actor they've watched most often. With their permission, of course: good personalization also means respecting privacy.
+
+**Game strategy.** Some models adjust difficulty to each player's level so the challenge is demanding but never impossible. Sometimes the difference is a matter of millimetres.
+
+**Classification.** Back to customer service: a model that reads each email and sends it to the right team, so nobody wastes time forwarding. A more serious example is models that help detect pneumonia in chest X-rays, deployed in clinical settings during the pandemic.
+
+**Prediction.** [Google's Flood Hub](https://blog.google/outreach-initiatives/sustainability/flood-hub-ai-flood-forecasting-more-countries/) forecasts river floods up to seven days ahead by combining weather forecasts and satellite imagery. It started as a pilot in India in 2018 with about 48 hours of lead time. A week's notice gives people time to reach safety.
+
+## How a project is built: the mountain to climb
+
+Before you start climbing you need to know where you're going: what do I want to predict and what decision will I make with it? From there, the path has three stages and the model takes up only the middle one. This is my map, with what to watch at each stage:
+
+
+
+And now, the obstacles at each stage, told the way I'd explain them to myself.
+
+### First stage: the data
+
+Everything starts with data, and it almost never arrives ready. The first problem is that it's incomplete or inconsistent: gaps, duplicates, dates written three different ways. Next, there are few labelled examples, because someone has to add the correct answer by hand. And finally, it tends to be imbalanced: in customer service emails there will be far more enquiries than complaints, and the model may end up ignoring the rare cases.
+
+The solution is to invest time in preprocessing. First, profile the data to understand what's there. Then clean it, keep only what adds value, transform it into a format the model understands, enrich it with extra information and, at the end, validate that the result makes sense. It's not the flashiest part, but everything else depends on it.
+
+### Second stage: build and train
+
+With the data ready it's time to train, and four classic problems appear.
+
+The first is choosing the algorithm. There are many and none is best at everything, so the sensible approach is to try several, compare their results with metrics such as precision or recall, and consider what kind of problem it is: classifying, predicting a number or grouping.
+
+The second is overfitting: the model learns the training examples so well that it fails on new ones. To avoid it you split the data into training, validation and test sets, apply techniques that limit the model's complexity (regularization) and, if possible, get more data.
+
+The third is hyperparameters, the settings the model doesn't learn by itself. Trying them by hand takes forever, so the search is automated with techniques such as Grid Search or Random Search.
+
+And the fourth is computing power: training large models needs a lot of machine. You solve it by renting specialised processors in the cloud and splitting the training into small batches.
+
+### Third stage: deploy and maintain
+
+When the model works on your laptop, the hard part begins. The first problem is integrating it with the systems that already exist, which speak other formats and technologies. The usual approach is to offer it as a service other applications can call, documenting clearly what goes in and what comes out.
+
+The second is that performance degrades over time, because the world changes and new data no longer looks like the training data. The solution is to monitor precision and recall continuously, with automatic alerts, and retrain the model with recent data.
+
+Two more are worth remembering: handling a large volume of requests without slowing down (with cloud services that scale on their own) and making sure the model doesn't treat certain groups unfairly, which is exactly the next topic.
+
+## Model governance: what you can't forget
+
+Beyond the technical problems, three pillars hold up a serious project.
+
+**Traceability.** Keep a record of every step, from the data to the deployment, with tools such as MLflow. If the model starts to fail, it lets you go back and see what changed: the data? some setting? It also lets you explain why a decision was made.
+
+**Fairness.** Check that the model doesn't treat certain groups worse or repeat the biases in the data. If the email model served people who write formally first and left those who make spelling mistakes until last, it would be unfair. It's measured with specific metrics, regular audits and, in critical cases, a person reviewing.
+
+**Continuous monitoring.** Watch the model in production to detect when the data changes and it stops getting things right, known as *concept drift*. A movie recommender goes stale when tastes change.
+
+## Training the model is only the tip of the iceberg
+
+When I started I thought the job was mostly writing the model's code, and that's a small part. Around it you have to collect and verify the data, extract its features, manage configuration and computing resources, have analysis tools, build the infrastructure that serves the model and watch it once it's running.
+
+
+
+The idea comes from a well-known 2015 Google paper, [*Hidden Technical Debt in Machine Learning Systems*](https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf), which warns that ML systems pile up maintenance costs over time. That's why research and production are different worlds: in research what matters most is the model's performance, while in production response speed, ever-changing data, fairness and being able to explain decisions weigh just as much.
+
+## Three ways to build a model
+
+Luckily you don't have to climb the whole mountain from scratch in every project. In class we saw three levels, from least to most work. The deeper into the iceberg you go, the more control you have and the more you have to maintain.
+
+
+
+An API saves you almost everything under the water. An end-to-end project puts it all in your hands.
+
+## Putting it into practice
+
+To put it to the test I'm building a recycling classifier with Teachable Machine, the Custom AI level tool: a photo of an object and the answer to which bin it goes in. It has its own page, with the plan, the tests and the results: [Recycling classifier](https://isabelamrein.github.io/en/projects/recycling-classifier/).
+
+## A project I won't build (and what it teaches)
+
+My first idea was a mushroom classifier: edible or poisonous. I've deliberately ruled it out as an application. A model trained on a handful of photos will make mistakes, and in this problem the mistakes don't cost the same. Calling a toxic mushroom "edible" can be fatal. Calling an edible one "toxic" only costs you a dinner.
+
+That's why it matters to look at more than the overall accuracy percentage. Here the key metric would be *recall*: of all the toxic mushrooms, how many does the model manage to flag as toxic? Also, many poisonous mushrooms look very much like edible ones, and identifying them safely is a job for an expert, not a photo.
+
+The lesson is about design: choosing the right metric and thinking about the context of use are part of building a model. When real risk is involved, the model assists a person; it doesn't decide for them. And just in case: never use a photo model to decide what to eat.
+
+## What I take away
+
+Machine learning isn't magic and it isn't reserved for experts. It's a different way of solving problems in which data quality and maintenance weigh more than the algorithm itself, and training the model is only the tip of the iceberg. You can follow how the classifier is going on [its project page](https://isabelamrein.github.io/en/projects/recycling-classifier/).
