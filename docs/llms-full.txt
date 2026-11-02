@@ -7,7 +7,7 @@ Sitio personal y bilingüe (español e inglés) de Isabel Amrein De Luca, Lendin
 ## Español
 
 ### Clasificador de reciclaje
-URL: https://isabelamrein.github.io/es/proyectos/clasificador-reciclaje/
+URL: https://isabelamrein.com/es/proyectos/clasificador-reciclaje/
 Resumen: Un modelo que, a partir de una foto, dice a qué contenedor va cada objeto. Pensado como un juego educativo para aprender a reciclar.
 
 ## Qué quiero resolver
@@ -38,7 +38,7 @@ Los publicaré aquí cuando termine las pruebas: cuántas fotos usé por clase, 
 > Es una herramienta educativa pensada para usar con un adulto cerca. No sustituye las indicaciones oficiales de cada municipio.
 
 ### Máster en Data Science e IA generativa
-URL: https://isabelamrein.github.io/es/proyectos/master-data-science-ia/
+URL: https://isabelamrein.com/es/proyectos/master-data-science-ia/
 Resumen: Lo que voy aprendiendo en mi máster de Data Science e IA generativa, clase a clase, con mis palabras, mis ejemplos y proyectos pequeños para ponerlo a prueba.
 
 ## De qué trata
@@ -48,11 +48,11 @@ Este proyecto reúne lo que aprendo en mi máster en Data Science e IA generativ
 ## Cómo lo trabajo
 
 - **Con mis palabras.** Las clases y las presentaciones son mi punto de partida, pero cada entrada se escribe con mis palabras y con ejemplos que construyo yo.
-- **Con proyectos pequeños.** Si no puedo hacer algo pequeño con una idea, probablemente aún no la he entendido. Algunos viven en su propia página, como el [clasificador de reciclaje](https://isabelamrein.github.io/es/proyectos/clasificador-reciclaje/).
+- **Con proyectos pequeños.** Si no puedo hacer algo pequeño con una idea, probablemente aún no la he entendido. Algunos viven en su propia página, como el [clasificador de reciclaje](https://isabelamrein.com/es/proyectos/clasificador-reciclaje/).
 - **Con los errores a la vista.** Lo que sale mal suele enseñar más que lo que sale bien.
 
 ### Del problema al match: cómo plantearíamos buscar casa con IA
-URL: https://isabelamrein.github.io/es/blog/del-problema-al-match-buscar-casa-con-ia/
+URL: https://isabelamrein.com/es/blog/del-problema-al-match-buscar-casa-con-ia/
 Resumen: Un caso práctico de clase: cómo pasar de un problema real, buscar casa, a una idea con valor basada en datos e IA, con modelo de negocio y métricas.
 
 Esta clase fue distinta de las anteriores: en vez de escuchar, nos tocó construir. Forma parte del módulo *Business Data and AI Strategy* y fue un **taller de casos de uso con IA**, la sesión de innovación del módulo. Este artículo cuenta el caso desde el problema hasta la propuesta de valor. Es la parte práctica que acompaña a la teoría: el caso seguirá creciendo con las siguientes clases y lo iré enlazando con la teoría que lo explica.
@@ -142,7 +142,7 @@ Si lo aplico a nuestro caso, los activos serían las conversaciones con las pers
 El caso continúa en las siguientes clases.
 
 ### Estrategia de datos: primero el propósito, después el plan
-URL: https://isabelamrein.github.io/es/blog/estrategia-de-datos-proposito-y-plan/
+URL: https://isabelamrein.com/es/blog/estrategia-de-datos-proposito-y-plan/
 Resumen: Una estrategia de datos es un propósito más un plan. Cómo situar una organización según su madurez y por qué el dato solo genera valor si lo entiende quien lo usa.
 
 Esta clase me costó al principio: durante la primera parte no tenía claro a dónde queríamos llegar. Al final todo encajó y me dejó una idea que sirve igual para un proyecto que para un equipo entero: antes de hablar de datos, hay que saber para qué.
@@ -216,7 +216,7 @@ Si me quedo con una palabra de la clase es ecosistema. El salto a la transformac
 Antes de elegir tecnología, hay que tener claro el para qué. Después, diagnosticar con honestidad en qué punto estamos y construir un plan pequeño y repetible. Y recordar que el dato solo genera valor si lo entiende quien lo usa.
 
 ### Machine Learning: cuando los datos escriben las reglas
-URL: https://isabelamrein.github.io/es/blog/machine-learning-datos-escriben-reglas/
+URL: https://isabelamrein.com/es/blog/machine-learning-datos-escriben-reglas/
 Resumen: Qué es el Machine Learning, cómo se construye un proyecto de principio a fin y por qué entrenar el modelo es solo la punta del iceberg.
 
 Mi primera clase de Data Science e IA generativa respondió a una pregunta que parece obvia hasta que intentas explicarla: ¿qué es exactamente el Machine Learning? Estos son mis apuntes, reescritos con mis propios ejemplos, y un proyecto aparte con el que lo pongo a prueba.
@@ -317,7 +317,7 @@ Una API te ahorra casi todo lo que hay bajo el agua. Un proyecto end-to-end te l
 
 ## Lo llevo a la práctica
 
-Para ponerlo a prueba estoy construyendo un clasificador de reciclaje con Teachable Machine, la herramienta del nivel Custom AI: una foto de un objeto y la respuesta de a qué contenedor va. Tiene su propia página, con el plan, las pruebas y los resultados: [Clasificador de reciclaje](https://isabelamrein.github.io/es/proyectos/clasificador-reciclaje/).
+Para ponerlo a prueba estoy construyendo un clasificador de reciclaje con Teachable Machine, la herramienta del nivel Custom AI: una foto de un objeto y la respuesta de a qué contenedor va. Tiene su propia página, con el plan, las pruebas y los resultados: [Clasificador de reciclaje](https://isabelamrein.com/es/proyectos/clasificador-reciclaje/).
 
 ## Un proyecto que no voy a construir (y qué enseña)
 
@@ -329,12 +329,12 @@ La lección es de diseño: elegir la métrica adecuada y pensar en el contexto d
 
 ## Lo que me llevo
 
-El Machine Learning no es magia ni algo reservado a expertos. Es una forma distinta de resolver problemas en la que pesan más la calidad de los datos y el mantenimiento que el algoritmo en sí, y entrenar el modelo es solo la punta del iceberg. Puedes seguir cómo me va con el clasificador en [su página de proyecto](https://isabelamrein.github.io/es/proyectos/clasificador-reciclaje/).
+El Machine Learning no es magia ni algo reservado a expertos. Es una forma distinta de resolver problemas en la que pesan más la calidad de los datos y el mantenimiento que el algoritmo en sí, y entrenar el modelo es solo la punta del iceberg. Puedes seguir cómo me va con el clasificador en [su página de proyecto](https://isabelamrein.com/es/proyectos/clasificador-reciclaje/).
 
 ## English
 
 ### Recycling classifier
-URL: https://isabelamrein.github.io/en/projects/recycling-classifier/
+URL: https://isabelamrein.com/en/projects/recycling-classifier/
 Resumen: A model that, from a photo, says which bin each object goes in. Designed as an educational game to learn how to recycle, built with a no-code tool.
 
 ## What I want to solve
@@ -365,7 +365,7 @@ I'll publish them here once the tests are done: how many photos I used per class
 > It's an educational tool meant to be used with an adult nearby. It doesn't replace each municipality's official guidance.
 
 ### Master's in Data Science and Generative AI
-URL: https://isabelamrein.github.io/en/projects/masters-data-science-ai/
+URL: https://isabelamrein.com/en/projects/masters-data-science-ai/
 Resumen: What I'm learning in my master's in Data Science and generative AI, class by class, in my own words, with my own examples and small projects to put it to the test.
 
 ## What it's about
@@ -375,11 +375,11 @@ This project collects what I learn in my master's in Data Science and generative
 ## How I work
 
 - **In my own words.** Classes and slides are my starting point, but every entry is written in my own words, with examples I build myself.
-- **With small projects.** If I can't build something small with an idea, I probably haven't understood it yet. Some live on their own page, like the [recycling classifier](https://isabelamrein.github.io/en/projects/recycling-classifier/).
+- **With small projects.** If I can't build something small with an idea, I probably haven't understood it yet. Some live on their own page, like the [recycling classifier](https://isabelamrein.com/en/projects/recycling-classifier/).
 - **With mistakes in plain sight.** What goes wrong usually teaches more than what goes right.
 
 ### From problem to match: how we would approach finding a home with AI
-URL: https://isabelamrein.github.io/en/blog/from-problem-to-match-finding-a-home-with-ai/
+URL: https://isabelamrein.com/en/blog/from-problem-to-match-finding-a-home-with-ai/
 Resumen: A class case study: how to go from a real problem, finding a home, to a data and AI idea with value, a business model and metrics.
 
 This class was different from the earlier ones: instead of listening, we had to build. It is part of the *Business Data and AI Strategy* module and it was an **AI use case workshop**, the innovation session of the module. This article tells the case from the problem to the value proposition. It is the practical side that goes with the theory: the case will keep growing with the next classes and I will link it to the theory that explains it.
@@ -469,7 +469,7 @@ Applying it to our case, the assets would be the conversations with the people s
 The case continues in the next classes.
 
 ### Data strategy: purpose first, then the plan
-URL: https://isabelamrein.github.io/en/blog/data-strategy-purpose-and-plan/
+URL: https://isabelamrein.com/en/blog/data-strategy-purpose-and-plan/
 Resumen: A data strategy is a purpose plus a plan. How to place an organization by its maturity, and why data only creates value if the people who use it understand it.
 
 This class was hard for me at first: during the first part I wasn't clear on where we were heading. In the end everything clicked, and it left me with an idea that works as well for a single project as for a whole team: before talking about data, you have to know what it's for.
@@ -543,7 +543,7 @@ If I take one word from the class, it's ecosystem. The leap to transformation co
 Before choosing technology, you have to be clear about what it's for. Then, diagnose honestly where we are and build a small, repeatable plan. And remember that data only creates value if the person using it understands it.
 
 ### Machine learning: when the data writes the rules
-URL: https://isabelamrein.github.io/en/blog/machine-learning-data-writes-the-rules/
+URL: https://isabelamrein.com/en/blog/machine-learning-data-writes-the-rules/
 Resumen: What machine learning is, how a project is built from start to finish, and why training the model is only the tip of the iceberg.
 
 My first Data Science and generative AI class answered a question that seems obvious until you try to explain it: what exactly is machine learning? These are my notes, rewritten with my own examples, and a separate project where I put it to the test.
@@ -644,7 +644,7 @@ An API saves you almost everything under the water. An end-to-end project puts i
 
 ## Putting it into practice
 
-To put it to the test I'm building a recycling classifier with Teachable Machine, the Custom AI level tool: a photo of an object and the answer to which bin it goes in. It has its own page, with the plan, the tests and the results: [Recycling classifier](https://isabelamrein.github.io/en/projects/recycling-classifier/).
+To put it to the test I'm building a recycling classifier with Teachable Machine, the Custom AI level tool: a photo of an object and the answer to which bin it goes in. It has its own page, with the plan, the tests and the results: [Recycling classifier](https://isabelamrein.com/en/projects/recycling-classifier/).
 
 ## A project I won't build (and what it teaches)
 
@@ -656,4 +656,4 @@ The lesson is about design: choosing the right metric and thinking about the con
 
 ## What I take away
 
-Machine learning isn't magic and it isn't reserved for experts. It's a different way of solving problems in which data quality and maintenance weigh more than the algorithm itself, and training the model is only the tip of the iceberg. You can follow how the classifier is going on [its project page](https://isabelamrein.github.io/en/projects/recycling-classifier/).
+Machine learning isn't magic and it isn't reserved for experts. It's a different way of solving problems in which data quality and maintenance weigh more than the algorithm itself, and training the model is only the tip of the iceberg. You can follow how the classifier is going on [its project page](https://isabelamrein.com/en/projects/recycling-classifier/).
