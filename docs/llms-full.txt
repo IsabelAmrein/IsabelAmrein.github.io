@@ -51,95 +51,193 @@ Este proyecto reúne lo que aprendo en mi máster en Data Science e IA generativ
 - **Con proyectos pequeños.** Si no puedo hacer algo pequeño con una idea, probablemente aún no la he entendido. Algunos viven en su propia página, como el [clasificador de reciclaje](https://isabelamrein.com/es/proyectos/clasificador-reciclaje/).
 - **Con los errores a la vista.** Lo que sale mal suele enseñar más que lo que sale bien.
 
-### Del problema al match: cómo plantearíamos buscar casa con IA
-URL: https://isabelamrein.com/es/blog/del-problema-al-match-buscar-casa-con-ia/
-Resumen: Un caso práctico de clase: cómo pasar de un problema real, buscar casa, a una idea con valor basada en datos e IA, con modelo de negocio y métricas.
+### Cuatro decisiones para construir una empresa de datos
+URL: https://isabelamrein.com/es/blog/cuatro-decisiones-empresa-de-datos/
+Resumen: Innovación, estrategia, cultura y gobierno del dato como cuatro decisiones, con sus opciones, un criterio para elegir y un caso ficticio, Clink, como ejemplo.
 
-Esta clase fue distinta de las anteriores: en vez de escuchar, nos tocó construir. Forma parte del módulo *Business Data and AI Strategy* y fue un **taller de casos de uso con IA**, la sesión de innovación del módulo. Este artículo cuenta el caso desde el problema hasta la propuesta de valor. Es la parte práctica que acompaña a la teoría: el caso seguirá creciendo con las siguientes clases y lo iré enlazando con la teoría que lo explica.
+Una empresa de datos se construye por capas, y cada capa obliga a elegir entre opciones que cuestan cosas distintas. Este artículo ordena lo que vimos en el módulo *Business Data and AI Strategy* como cuatro decisiones: de dónde nace el caso de uso, qué estrategia de datos seguir, qué cultura construir y qué modelo de gobierno adoptar.
 
-## El caso
+En cada una encontrarás las opciones, lo que ofrece cada una, un criterio para elegir y, al final, un recuadro con lo que eligió nuestro equipo. El ejemplo es Clink, una startup ficticia de búsqueda de vivienda que usamos como caso de clase: ilustra, no es el tema.
 
-El profesor nos planteó un caso realista: una empresa dedicada a la búsqueda de viviendas, que funciona como agencia inmobiliaria. En equipo y sobre una pizarra colaborativa teníamos que levantar el problema, valorar alternativas, proponer una solución con una propuesta de valor basada en el dato y perfilar un plan: cómo lo haríamos y cómo mediríamos el éxito. Terminamos con un mini pitch de cuatro minutos por equipo.
+## Las cuatro decisiones de un vistazo
 
-Trabajamos con una versión adaptada del *Lean Canvas*, un lienzo para ordenar una idea de negocio. Se recorre en tres pasos, y me parece una buena forma de ordenar cualquier idea:
+Cada capa se apoya en la anterior y se decide con una pregunta distinta.
 
-
-
-## Paso 1: entender el problema
-
-Partimos del recorrido de una persona que quiere comprar una casa, de la idea a la firma: piensa en comprar, investiga la zona, busca en portales, contacta y concierta visitas, negocia el precio, firma las arras, busca financiación y formaliza la compra ante notario y banco. El profesor señaló dos tramos como el foco del caso: la búsqueda en portales y el contacto para concertar visitas.
-
-
-
-El material planteaba dos puntos de vista: el de quien busca casa y el de la agencia, que pierde contactos de calidad porque no puede atender todas las llamadas y no distingue quién tiene un interés real. Nos quedamos con el primero. A lo largo del recorrido, quien busca se hace preguntas como dónde buscar, cuánto se puede gastar o cuál es el precio justo; los filtros no responden a lo que de verdad quiere saber, la información está repartida entre imágenes y textos, y todo es un proceso manual y reactivo, con una negociación y un papeleo que exigen mucha dedicación. Además, por lo que nos contaron compañeros, buscar casa puede ser una experiencia agotadora: horas comparando y peleando con otras personas por las mismas viviendas. En el lienzo lo resumimos en tres líneas: no hay un portal único de oferta y de información, se pierde mucho tiempo buscando y la experiencia de uso es mala.
-
-¿Y qué hace hoy la gente? Buscar en portales individuales. Es la alternativa que existe, y tiene costes claros: se pierde tiempo, las viviendas aparecen repetidas y hay que llamar una por una.
-
-## Paso 2: diseñar la solución
-
-Nuestra idea fue crear un modelo centralizado que unifique la búsqueda. Algo parecido a esos comparadores que reúnen a muchas empresas y te dan el mejor precio para un billete de tren, pero con las viviendas de varios portales.
-
-La pieza clave es un agente conversacional. En vez de rellenar filtros, la persona habla con él, también por voz, y le cuenta qué busca y cómo vive. Esa conversación es dato no estructurado: el agente lo convierte en variables, las cruza con el catálogo de viviendas y devuelve un **porcentaje de match** con cada una, explicando por qué encaja: «creo que este piso es para ti por esto y esto, y te vas a sentir bien por esto otro».
+CapaQué se decideOpcionesLa pregunta que ayuda a elegir
+1. InnovaciónDe dónde nace el caso de usoPartir del problema, o partir del dato¿Hay alguien con un dolor claro, o tengo un dato con potencial?
+2. EstrategiaQué estrategia de datos seguirControl, optimización o transformación¿Protejo un negocio, lo mejoro o creo uno nuevo?
+3. CulturaQué cultura construir y cómoConstructiva, pasiva o agresiva; ritos; alfabetización¿Qué comportamientos quiero que se repitan sin que nadie los mande?
+4. GobiernoQué modelo operativo adoptarDescentralizado, en red, centralizado, híbrido o federado¿Cuánto control necesito y cuánta velocidad estoy dispuesta a perder?
 
 
+## Decisión 1, innovación: de dónde nace el caso de uso
 
-Las viviendas llegarían por conexiones API con las plataformas o, si no fuera posible, mediante un modelo de extracción de datos (*scraping*).
+Un caso de uso nace de un problema o de un dato, y conviene hacer las dos pasadas.
 
-Los **objetivos clave** que nos marcamos fueron cuatro:
+AspectoPartir del problemaPartir del dato
+Cómo funcionaEl design thinking tradicional: empatizar, definir, idear, prototipar y evaluarSe parte del dato como activo con potencial y se busca su encaje en un proceso: potencial de los datos, fit de producto, diseño y despliegue
+Punto fuerteEl valor está claro desde el principioAprovecha lo que ya tienes y lo que tienes a tu alcance
+RiesgoQue no exista el dato para resolverloUna solución en busca de un problema
+Pregunta de partida¿Qué necesita la persona para la que diseñamos?¿Qué conocimiento nuevo podemos construir con este dato?
 
-- Conseguir la confianza del cliente.
-- Modernizar el proceso de búsqueda.
-- Ofrecer un modelo conversacional que dé las alternativas por voz.
-- Convencer de que los pisos ofrecidos están escogidos a su medida.
 
-## La pregunta incómoda del profesor
 
-Aquí llegó el reto: ¿por qué la empresa más grande del sector, que ya tiene herramientas parecidas, querría contratarnos o enviarnos su tráfico? Nuestra respuesta fue darle la vuelta: no íbamos a vendérselo a ella. Como domina casi todo el mercado, nos pusimos del lado de las pequeñas: juntarlas en una plataforma donde todas pudieran convivir y competir con más fuerza.
 
-## Paso 3: convertirla en negocio
+Dentro de cada camino hay más elecciones. **A quién se lo resuelves:** un mismo sector tiene clientes distintos, y en la vivienda son quien busca casa y la agencia inmobiliaria, cada uno con sus puntos de dolor y sus métricas. **Cómo ganas dinero:** B2B si pagan las empresas, B2B2C si llegas al usuario a través de otra empresa y B2C si paga el propio usuario con una suscripción.
 
-### La propuesta de valor
+**La herramienta.** El taller se trabajó en un tablero de Miro con once casillas, agrupadas en tres pasos: entender el problema (problema y alternativas), diseñar la solución (soluciones candidatas, solución y objetivos clave) y convertirla en negocio (propuesta única de valor, a quién va dirigida, retos, ingresos, concepto general y métricas clave). El ejercicio termina con un mini pitch de cuatro minutos por equipo.
 
-Ahorrar tiempo y mejorar la experiencia de búsqueda con una hiperpersonalización unificada y con servicios extra. Son tres ideas:
 
-- **Hiperpersonalización.** Con las fotos de las plataformas generamos un render 3D realista y lo ambientamos según lo que la persona nos ha contado. Si busca casa para vivir con hijos, perro y su suegra, la vivienda se adapta a esas necesidades para que se imagine viviendo allí; si es soltera y quiere compartir con amigos, el render muestra otro uso. Verse en la casa aumenta el interés.
-- **Unificación.** Reunimos la oferta y damos el porcentaje de match. Además, gestionamos el contacto: si alguien ve una vivienda a través de nuestra aplicación, enviamos nosotros un mensaje ya preparado a la plataforma, a la inmobiliaria o al particular para pedir una visita.
-- **Servicios extra.** Cuando alguien ya está decidido y le ha gustado su render, podemos ofrecerle una empresa de reformas que le dé buen precio según el estilo de la casa, orientación legal y financiera (cuánto va a costar de verdad, qué conviene saber de las arras o de los seguros de hipoteca) y enlace con brokers de hipotecas.
 
-### A quién va dirigida
+**Una prueba útil.** Formula la pregunta más incómoda: ¿por qué la empresa más grande del sector querría trabajar conmigo? Si no hay respuesta, la idea necesita otro enfoque.
 
-A dos públicos: personas que buscan piso para comprar, porque la idea es para venta, y los pequeños portales inmobiliarios que quieran unirse para dar un servicio conjunto.
+**Criterio.** Parte del problema si ya tienes a alguien a quien escuchar; parte del dato si tu activo está sin usar; y haz después la otra pasada, porque el camino no es lineal.
 
-### Dos retos
+En ClinkPartimos del problema de quien busca casa, con foco en dos tramos de su recorrido: buscar en portales y contactar para concertar visitas. La solución es un agente conversacional que cruza la oferta de varios portales y devuelve un porcentaje de coincidencia explicado. Los datos llegarían por API, con contratos de mutuo acuerdo con cada portal. A la pregunta incómoda respondimos juntando a los portales pequeños en lugar de competir con el grande.
 
-Nos planteamos dos preguntas difíciles. La primera, **cómo agrupar la oferta**: con acuerdos con plataformas, brokers y publicidad, un modelo B2B. La segunda, **cómo rentabilizarlo**. Por un lado, ingresos de reformas, brokers y servicios legales; por otro, una suscripción para quien busca casa. Una búsqueda dura unos tres o cuatro meses, hasta que se compra, y mucha gente se suscribe a un asistente de IA para un trabajo concreto y luego se da de baja. Aquí sería igual: se paga mientras dura la búsqueda y se obtiene todo el servicio personalizado. Con los portales, los acuerdos serían por el tráfico que les enviamos, por contactos o por suscripción; eso quedó por definir.
 
-### El concepto general
 
-En una línea: un pacto con los pequeños portales y un agente de IA multimodal que habla con el cliente y trae toda la información. Detrás hay un sistema de recomendación, conexión por API con los portales, los datos del usuario compilados, los datos de cada portal y un modelo de IA que aprende de las búsquedas que acaban bien. En la pizarra apuntamos una idea más: un asistente formado por subagentes, según la fase en la que se encuentre quien compra.
 
-### Cómo mediríamos el éxito
 
-El profesor nos dio tres miradas de partida: la de la persona que busca (tiempo de búsqueda, número de visitas físicas y satisfacción), la de la agencia (contactos de calidad y operaciones cerradas) y la de la empresa (ingresos y base de usuarios). Nosotros nos quedamos con tres métricas:
+## Decisión 2, estrategia: qué estrategia de datos seguir
 
-- **Tráfico de clientes**, orgánico y de pago: cómo conseguimos que la gente entre en la plataforma.
-- **Conversión vía API**: de las personas con las que hablamos y a las que damos matches, cuántas enviamos a una plataforma y cierran una visita en persona. Como estamos conectados por API, los portales nos informan; esa visita es nuestra conversión, y la compra sería un extra.
-- **Satisfacción**: una encuesta al terminar la conversación.
+Una estrategia de datos es un propósito más un plan, y su tipo depende de si quieres proteger un negocio, mejorarlo o crear uno nuevo.
 
-## La pieza que falta: partir también del dato
+Una estrategia describe la situación de partida, la de destino y el camino entre ambas. Se resume en cuatro preguntas: dónde queremos llegar, qué necesitamos, qué puede impedirnos llegar y qué van a hacer los demás.
 
-En los anexos de la presentación había una idea que me pareció útil para este caso. El diseño de producto tradicional empieza por la persona y su problema, que es justo lo que hicimos. Pero hay otra puerta de entrada: empezar por el **dato como activo** y buscar dónde encaja. Se resume en unas pocas preguntas: qué datos tenemos y de qué calidad son, si son únicos o nos darían un posicionamiento diferencial, en qué procesos de nuestro cliente podrían serle útiles y si pueden producir una experiencia diferente a la actual. Y un aviso importante: el proceso no es lineal, se va y se vuelve entre explorar, encajar, idear, ejecutar y evaluar. La fuente que citaba la presentación es *The Design Thinking Playbook*.
+**La herramienta.** El taller se trabajó en un tablero de Miro con ocho casillas, en tres pasos: situación de partida, propósito, visión y tres objetivos y resultados clave; plan de acciones e indicadores de control de gestión; y riesgos y medidas de mitigación.
 
-Si lo aplico a nuestro caso, los activos serían las conversaciones con las personas que buscan, el catálogo de las plataformas y sus fotografías: con ellos se hacen el match y el render.
+TipoPregunta claveAnalíticaQué busca
+Control¿Qué pasó y cuánto ganamos o perdimos?Descriptiva y diagnóstica, la del BI clásicoProteger el valor: evitar pérdidas y cumplir la normativa
+Optimización¿Qué va a pasar y cómo lo hacemos mejor?Predictiva, prescriptiva y de IAEficiencia operativa y más margen
+Transformación¿Qué nuevo negocio podemos inventar?De ecosistema y de monetización del datoNuevas líneas de ingresos no tradicionales
+
+
+
+
+Cada pregunta de negocio se responde con un tipo de análisis distinto.
+
+
+
+**Qué la hace buena o mala.** Una buena estrategia tiene diagnóstico, elección de un enfoque y coherencia entre acciones y recursos. Una mala tiene objetivos vagos, cambia de prioridades a cada rato, ignora sus debilidades y no mide el avance.
+
+**Qué la sostiene.** Tres elementos: la estrategia, el plan de cambio y el control de gestión. Los cambios duros se planifican con facilidad; las inercias culturales, no. Y el control exige ser duro con la tarea y blando con las personas, con un ciclo continuo de planificar, ejecutar, medir y controlar.
+
+**Antes de decidir, un diagnóstico.** Dos herramientas: el *dataMat*, una encuesta de 105 preguntas que puntúa la organización en 21 ámbitos del mundo del dato, y el *dataToolkit*, un juego de tarjetas, una por ámbito, en las que te sitúas en uno de tres niveles para diseñar la estrategia a partir de los puntos débiles. Las cuento con más detalle en [Estrategia de datos: primero el propósito, después el plan](/es/blog/estrategia-de-datos-proposito-y-plan/).
+
+**Criterio.** Control si lo urgente es no perder lo que ya tienes; optimización si tienes un negocio que funciona y datos para mejorarlo; transformación si el negocio todavía no existe.
+
+En ClinkElegimos transformación, porque no mejora un negocio existente: crea uno. Tres objetivos: tráfico orgánico, un equipo sólido y un modelo de IA fiable. El riesgo más crítico es legal, que los portales dejen de ceder anuncios. El segundo es la alucinación: los datos duros, como el precio, salen siempre de la base de datos, y el agente cita la fuente y sabe decir que no lo sabe.
+
+
+
+## Decisión 3, cultura: qué cultura construir y cómo
+
+El principal freno de un proyecto de datos no es la tecnología, son las personas, la cultura y la gestión del cambio. En una encuesta de liderazgo de datos e IA de 2026 citada en clase, el 93,2 % señaló ese freno, frente a un 7 % que señaló la tecnología.
+
+Una cultura débil cuesta definirla y explicarla, tiene poca alineación con los valores y se controla con procedimientos extensos y burocracia. Una cultura fuerte la entiende y la sabe explicar cualquier persona, con mucha alineación y pocas normas.
+
+
+
+### Cómo se construye
+
+- **Metáforas** que comparan la organización con una máquina, un grupo o una familia.
+- **Historias** que enseñan cómo actuar en cada caso.
+- **Ritos y ceremonias**, que combinan las dos anteriores. Pueden ser de iniciación, de mejora (con reconocimiento público), de integración o de reducción de conflictos.
+
+### Cómo se cuida
+
+Con un plan de alfabetización en datos:
+
+- Distinguir la alfabetización en datos de la de tecnología.
+- Entender que cada persona aprende distinto.
+- Premiar la curiosidad.
+- Definir qué habilidades de datos necesita cada persona.
+- Implicar a los líderes.
+- Usar un idioma común.
+- Definir qué es el éxito.
+- Recordar que la alfabetización es solo el principio.
+
+Qué se organizaUna opciónLa otra opción
+La plataforma de datosVisión monolítica: un lago de datos que centraliza todo, de la ingesta al usoData mesh: dominios, autoservicio y datos tratados como producto
+Las personas de datosUn equipo centralizadoEmbebidas en cada área, con un responsable de datos por dominio
+
+
+
+
+**Quién patrocina.** No solo quien tiene la autoridad que da el organigrama, la *potestas*, sino también quien tiene una influencia legítima, la *auctoritas*: referentes de su área que representan polos de poder informal.
+
+
+
+**Criterio.** Elige la cultura por los comportamientos que quieres ver repetidos y diseña ritos que los refuercen. La alfabetización funciona cuando la gente sabe explicar, comunicar y discutir, y pregunta en lugar de limitarse a aceptar.
+
+En ClinkLema: «El primer ladrillo es un dato. Los demás, juntos».Principios: cinco, sobre llegar juntos, un dato veraz y la transparencia sin ego.Ceremonias: un standup semanal con toda la empresa; demos y retros; una charla técnica mensual de diez minutos; un premio trimestral a la mejor solución basada en datos; una fiesta de la resiliencia.Patrocinio: el CEO, el CDAIO y el CFO, junto con expertos de dato de cada área.
+
+
+
+## Decisión 4, gobierno: qué modelo operativo adoptar
+
+El gobierno del dato decide quién puede decidir qué sobre el dato; la gestión lo ejecuta en el día a día. El modelo operativo articula roles, responsabilidades y decisiones, y tiene cinco versiones.
+
+ModeloCómo funcionaVentajasInconvenientes
+DescentralizadoSe colabora en comités y no hay un único propietarioEstructura plana, alineada con el negocio y fácil de implantar y de hacer crecerMuchos participantes; decidir entre muchos es difícil; la propiedad del dato queda poco clara
+En redEl descentralizado, formalizado con una matriz RACIDa dueño al dato sin crear un equipo central que sea un cuello de botellaExige definir quién es responsable, quién aprueba, a quién se consulta y a quién se informa
+CentralizadoEl más formal y maduro: una persona a cargoLiderazgo fuerte y decisiones más sencillasGran reto organizativo y cambio de paradigma; hay que cubrirlo todo desde el principio; es difícil de hacer crecer poco a poco
+HíbridoReúne ventajas del centralizado y del descentralizadoCombina estructura plana y alineación con el negocioHereda parte de los problemas del descentralizado: decisiones colaborativas difíciles y propiedad poco clara
+FederadoVariante del híbrido: estrategia centralizada y ejecución descentralizada, con un centro de excelencia que marca las pautasIdeal para grandes corporaciones; da autonomía a las filiales; permite un CDO por filial, está orientado a los stakeholders y admite un enfoque incremental por unidad o regiónProceso ambicioso y complejo; hay que buscar un punto de equilibrio y necesita muchos recursos
+
+
+
+
+**Los roles.** Cada dato necesita un dueño y alguien que cuide su definición: el dueño del dato, el responsable de datos o *data steward* y, en lo más alto, un cargo que integre datos, analítica e IA, el CDAIO.
+
+### Lo que se gobierna
+
+- **Glosario de negocio:** define cada concepto en lenguaje de negocio.
+- **Diccionario técnico:** dice cómo se guarda cada dato.
+- **Metadatos de negocio y técnicos:** conectan los dos anteriores.
+- **Calidad:** se mide con ocho dimensiones: exactitud, completitud, consistencia, integridad, razonabilidad, oportunidad, unicidad y validez.
+
+### En qué apoyarse
+
+- **DAMA-DMBOK:** ordena las áreas de conocimiento de la gestión de datos.
+- **Modelo SAM** de Henderson y Venkatraman: plantea dos tipos de alineación, la estratégica y la táctica.
+- **Amsterdam Information Model:** conocido como el modelo de las nueve celdas.
+
+**Criterio.** El modelo operativo no es para siempre: se elige por el tamaño y la madurez de la organización y se evoluciona al crecer. Elegir un modelo es elegir entre control y velocidad. Descentralizar es lo más fácil de empezar; centralizar exige cubrirlo todo desde el principio.
+
+En ClinkElegimos el modelo en red con matriz RACI, que fue también lo que recomendó el profesor para un equipo como el nuestro. El CDAIO aprueba los estándares de datos e IA, se consulta a los jefes de área y se informa a toda la empresa. Hay cinco equipos, cada uno con un dueño y un responsable de datos, y dos mecanismos contra los silos: contratos de datos entre equipos y un diccionario y un catálogo comunes. El glosario arrancó del embudo de contacto, cita, asistencia virtual y venta. Al crecer, evolucionaría a un modelo federado.
+
+
+
+## El hilo que une las cuatro decisiones
+
+Cada decisión responde a una pregunta distinta: para qué (estrategia), cómo nos comportamos (cultura) y quién decide (gobierno), con la innovación como punto de partida. Ninguna funciona sin las demás.
+
+
+
+Una estrategia sin cultura se queda en un documento, una cultura sin gobierno se convierte en buenas intenciones, y un gobierno sin propósito es burocracia.
+
+## Cómo decidir: una lista por capa
+
+Estas preguntas sirven para llegar a una decisión en cada capa antes de escribir nada.
+
+- **Innovación:** ¿quién sufre el problema y cómo lo sé? ¿Qué dato tengo o puedo conseguir? ¿Cuál es la pregunta más incómoda para mi idea?
+- **Estrategia:** ¿para qué lo hacemos? ¿Jugamos en control, optimización o transformación? ¿Qué podría impedirnos llegar?
+- **Cultura:** ¿qué comportamientos queremos ver repetidos? ¿Quién patrocina, con *potestas* y con *auctoritas*? ¿Cómo sabremos que la alfabetización funciona?
+- **Gobierno:** ¿quién decide qué? ¿Quién es dueño de cada dato? ¿Cómo definimos y medimos su calidad?
 
 ## Lo que me llevo
 
-- **Primero el problema, después la tecnología.** La idea solo tiene sentido porque el dolor es real: las horas que se pierden buscando casa.
-- **Una buena pregunta cambia el enfoque.** «¿Por qué la grande querría trabajar con vosotros?» nos hizo pasar de competir con ella a unir a las pequeñas.
-- **Se puede empezar por el problema o por el dato.** Conviene hacer las dos cosas, porque el camino no es lineal.
-- **Una idea de IA es también una idea de negocio.** Sin ingresos y sin métricas, se queda en un prototipo. Y todo se apoya en el dato: de la conversación a las variables, de las variables al match y del match a la conversión.
+- Cada capa es una decisión con opciones que cuestan cosas distintas: no hay una respuesta correcta, hay un criterio.
+- Se puede empezar por el problema o por el dato, y conviene hacer las dos pasadas, porque el camino no es lineal.
+- Una estrategia no es una lista de deseos: es diagnóstico, enfoque y coherencia.
+- La cultura se practica y se mide; no se declara.
+- Un dato sin dueño y sin definición no es un activo, y el modelo que le da dueño cambia con el tamaño de la organización.
 
-El caso continúa en las siguientes clases.
+**Una reflexión personal.** En la mayoría de los negocios, el equipo de negocio es el dueño del dato: conoce las necesidades de la empresa y sabe hablar también el idioma de la tecnología. Eso me hace pensar que estoy bien situada para seguir aprendiendo de las dos vertientes, la del negocio y la del dato.
+
+Gracias a David Rey, Rafael Fernández Campos, Ubaldo González y Alberto Turégano por las clases en las que se basa este artículo.
 
 ### Estrategia de datos: primero el propósito, después el plan
 URL: https://isabelamrein.com/es/blog/estrategia-de-datos-proposito-y-plan/
@@ -378,95 +476,193 @@ This project collects what I learn in my master's in Data Science and generative
 - **With small projects.** If I can't build something small with an idea, I probably haven't understood it yet. Some live on their own page, like the [recycling classifier](https://isabelamrein.com/en/projects/recycling-classifier/).
 - **With mistakes in plain sight.** What goes wrong usually teaches more than what goes right.
 
-### From problem to match: how we would approach finding a home with AI
-URL: https://isabelamrein.com/en/blog/from-problem-to-match-finding-a-home-with-ai/
-Resumen: A class case study: how to go from a real problem, finding a home, to a data and AI idea with value, a business model and metrics.
+### Four decisions to build a data company
+URL: https://isabelamrein.com/en/blog/four-decisions-to-build-a-data-company/
+Resumen: Innovation, strategy, culture and data governance as four decisions, with their options, a criterion for choosing and a fictional case, Clink, as an example.
 
-This class was different from the earlier ones: instead of listening, we had to build. It is part of the *Business Data and AI Strategy* module and it was an **AI use case workshop**, the innovation session of the module. This article tells the case from the problem to the value proposition. It is the practical side that goes with the theory: the case will keep growing with the next classes and I will link it to the theory that explains it.
+A data company is built in layers, and each layer forces you to choose between options that cost different things. This article organises what we covered in the *Business Data and AI Strategy* module as four decisions: where the use case comes from, which data strategy to follow, which culture to build and which governance model to adopt.
 
-## The case
+In each one you will find the options, what each offers, a criterion for choosing and, at the end, a box with what our team chose. The example is Clink, a fictional home-search startup we used as a class case: it illustrates, it is not the subject.
 
-The teacher gave us a realistic case: a company dedicated to finding homes, working as an estate agency. As a team, on a collaborative whiteboard, we had to identify the problem, weigh alternatives, propose a solution with a value proposition based on data and outline a plan: how we would do it and how we would measure success. We finished with a four-minute mini pitch per team.
+## The four decisions at a glance
 
-We worked with an adapted version of the *Lean Canvas*, a canvas for organising a business idea. It is worked through in three steps, and I think it is a good way to organise any idea:
+Each layer builds on the previous one and is decided with a different question.
 
-
-
-## Step 1: understand the problem
-
-We started from the journey of a person who wants to buy a home, from the idea to the signature: they think about buying, research the area, search portals, get in touch and book viewings, negotiate the price, sign the deposit contract, look for financing and complete the purchase at the notary and the bank. The teacher marked two stretches as the focus of the case: searching portals and getting in touch to book viewings.
-
-
-
-The material raised two points of view: the home seeker's and the agency's, which loses quality leads because it cannot answer every call and cannot tell who is really interested. We chose the first. Along the journey, the seeker asks things like where to search, how much they can spend or what the fair price is; the filters do not answer what they really want to know, the information is scattered across images and texts, and everything is a manual and reactive process, with negotiation and paperwork that demand a lot of dedication. On top of that, from what classmates told us, searching for a home can be exhausting: hours comparing and fighting other people for the same properties. On the canvas we summed it up in three lines: there is no single portal for listings and information, a lot of time is lost searching, and the user experience is poor.
-
-And what do people do today? Search on individual portals. It is the alternative that exists, and it has clear costs: time is lost, properties show up repeated and you have to call one by one.
-
-## Step 2: design the solution
-
-Our idea was to create a centralised model that unifies the search. Something like those comparison sites that bring many companies together and give you the best price for a train ticket, but with homes from several portals.
-
-The key piece is a conversational agent. Instead of filling in filters, the person talks to it, voice included, and tells it what they are looking for and how they live. That conversation is unstructured data: the agent turns it into variables, matches them against the catalogue of homes and returns a **match percentage** for each one, explaining why it fits: "I think this flat is for you because of this and this, and you will feel good about this other thing".
+LayerWhat is decidedOptionsThe question that helps you choose
+1. InnovationWhere the use case comes fromStart from the problem, or start from the dataIs there someone with a clear pain, or do I have data with potential?
+2. StrategyWhich data strategy to followControl, optimisation or transformationAm I protecting a business, improving it or creating a new one?
+3. CultureWhich culture to build and howConstructive, passive or aggressive; rites; literacyWhich behaviours do I want repeated without anyone ordering them?
+4. GovernanceWhich operating model to adoptDecentralised, networked, centralised, hybrid or federatedHow much control do I need and how much speed am I willing to give up?
 
 
+## Decision 1, innovation: where the use case comes from
 
-The homes would arrive through API connections with the platforms or, if that were not possible, through a data extraction model (*scraping*).
+A use case comes from a problem or from data, and it pays to make both passes.
 
-We set four **key objectives**:
+AspectStart from the problemStart from the data
+How it worksTraditional design thinking: empathise, define, ideate, prototype and evaluateYou start from data as an asset with potential and look for its fit in a process: data potential, product fit, design and rollout
+StrengthThe value is clear from the startIt makes use of what you have and what you can reach
+RiskThe data to solve it may not existA solution looking for a problem
+Starting questionWhat does the person we design for need?What new knowledge can we build with this data?
 
-- Win the customer's trust.
-- Modernise the search process.
-- Offer a conversational model that gives alternatives by voice.
-- Convince people that the homes offered are chosen to suit them.
 
-## The teacher's uncomfortable question
 
-Here came the challenge: why would the biggest company in the sector, which already has similar tools, want to hire us or send us its traffic? Our answer was to turn it around: we were not going to sell it to them. Since they dominate almost the whole market, we sided with the small ones: bringing them together on one platform where all of them could coexist and compete with more strength.
 
-## Step 3: turn it into a business
+There are more choices within each path. **Who you solve it for:** the same sector has different customers, and in housing they are the person looking for a home and the estate agency, each with their own pain points and metrics. **How you make money:** B2B if companies pay, B2B2C if you reach the user through another company and B2C if the user pays with a subscription.
 
-### The value proposition
+**The tool.** The workshop was run on a Miro board with eleven boxes, grouped in three steps: understand the problem (problem and alternatives), design the solution (candidate solutions, solution and key objectives) and turn it into a business (unique value proposition, who it is for, challenges, revenue, high-level concept and key metrics). The exercise ends with a four-minute mini pitch per team.
 
-Save time and improve the search experience with a unified hyper-personalisation with extra services. There are three ideas:
 
-- **Hyper-personalisation.** With the photos from the platforms we generate a realistic 3D render and stage it according to what the person has told us. If they are looking for a home to live in with children, a dog and their mother-in-law, the property adapts to those needs so they can imagine living there; if they are single and want to share with friends, the render shows another use. Seeing yourself in the home increases interest.
-- **Unification.** We bring the listings together and give the match percentage. We also handle the contact: if someone sees a property through our app, we send a ready-made message to the platform, the agency or the private seller to request a viewing.
-- **Extra services.** When someone is already decided and liked their render, we can offer a renovation company that gives a good price for the style of the home, legal and financial guidance (what it will really cost, what is worth knowing about deposits or mortgage insurance) and a link to mortgage brokers.
 
-### Who it is for
+**A useful test.** Ask the most uncomfortable question: why would the biggest company in the sector want to work with me? If there is no answer, the idea needs another approach.
 
-Two audiences: people looking for a flat to buy, because the idea is for sales, and the small property portals that want to join forces to offer a shared service.
+**Criterion.** Start from the problem if you already have someone to listen to; start from the data if your asset is going unused; and then make the other pass, because the path is not linear.
 
-### Two challenges
+In ClinkWe started from the problem of the person looking for a home, focusing on two stretches of their journey: searching on portals and getting in touch to arrange viewings. The solution is a conversational agent that crosses the listings of several portals and returns an explained match percentage. The data would arrive through APIs, under mutual-agreement contracts with each portal. We answered the uncomfortable question by bringing the small portals together instead of competing with the big one.
 
-We raised two hard questions. The first, **how to bring the supply together**: with agreements with platforms, brokers and advertising, a B2B model. The second, **how to make it profitable**. On one side, income from renovations, brokers and legal services; on the other, a subscription for people searching for a home. A search lasts about three or four months, until you buy, and many people subscribe to an AI assistant for a specific piece of work and then cancel. Here it would be the same: you pay while the search lasts and get the whole personalised service. With the portals, agreements would be based on the traffic we send them, on leads or on subscription; that was left to define.
 
-### The high-level concept
 
-In one line: a pact with the small portals and a multimodal AI agent that talks to the customer and brings all the information. Behind it there is a recommendation system, API connections with the portals, the user's compiled data, each portal's data and an AI model that learns from the searches that end well. On the whiteboard we noted one more idea: an assistant made of sub-agents, depending on the stage the buyer is at.
 
-### How we would measure success
 
-The teacher gave us three starting points of view: the person searching (search time, number of physical viewings and satisfaction), the agency (quality leads and closed deals) and the company (revenue and user base). We kept three metrics:
+## Decision 2, strategy: which data strategy to follow
 
-- **Customer traffic**, organic and paid: how we get people to enter the platform.
-- **Conversion via API**: of the people we talk to and give matches to, how many we send to a platform and close an in-person viewing. Since we are connected by API, the portals tell us; that viewing is our conversion, and the purchase would be an extra.
-- **Satisfaction**: a survey at the end of the conversation.
+A data strategy is a purpose plus a plan, and its type depends on whether you want to protect a business, improve it or create a new one.
 
-## The missing piece: starting from the data too
+A strategy describes the starting situation, the destination and the path between them. It boils down to four questions: where do we want to get, what do we need, what could stop us and what will others do.
 
-In the annexes of the presentation there was an idea I found useful for this case. Traditional product design starts from the person and their problem, which is exactly what we did. But there is another way in: start from the **data as an asset** and look for where it fits. It boils down to a few questions: what data do we have and how good is it, is it unique or would it give us a differentiating position, in which of our customer's processes could it be useful, and can it produce an experience different from today's. And an important warning: the process is not linear, you go back and forth between exploring, fitting, ideating, executing and evaluating. The source cited in the presentation is *The Design Thinking Playbook*.
+**The tool.** The workshop was run on a Miro board with eight boxes, in three steps: starting situation, purpose, vision and three objectives and key results; action plan and management control indicators; and risks and mitigation measures.
 
-Applying it to our case, the assets would be the conversations with the people searching, the platforms' catalogue and their photographs: with them we build the match and the render.
+TypeKey questionAnalyticsWhat it seeks
+ControlWhat happened and how much did we win or lose?Descriptive and diagnostic, classic BIProtect value: avoid losses and comply with regulation
+OptimisationWhat will happen and how do we do it better?Predictive, prescriptive and AIOperational efficiency and more margin
+TransformationWhat new business can we invent?Ecosystem and data monetisationNew, non-traditional revenue lines
+
+
+
+
+Each business question is answered with a different type of analytics.
+
+
+
+**What makes it good or bad.** A good strategy has a diagnosis, a chosen approach and coherence between actions and resources. A bad one has vague objectives, keeps changing priorities, ignores its weaknesses and does not measure progress.
+
+**What sustains it.** Three elements: the strategy, the change plan and management control. Hard changes are easy to plan; cultural inertia is not. And control means being hard on the task and soft on people, with a continuous cycle of planning, executing, measuring and controlling.
+
+**Before deciding, a diagnosis.** Two tools: *dataMat*, a 105-question survey that scores the organisation across 21 areas of the data world, and *dataToolkit*, a card game, one card per area, in which you place yourself on one of three levels in order to design the strategy from the weak points. I describe them in more detail in [Data strategy: purpose first, then the plan](/en/blog/data-strategy-purpose-and-plan/).
+
+**Criterion.** Control if the urgent thing is not to lose what you already have; optimisation if you have a business that works and data to improve it; transformation if the business does not exist yet.
+
+In ClinkWe chose transformation, because it does not improve an existing business: it creates one. Three objectives: organic traffic, a solid team and a reliable AI model. The most critical risk is legal, if the portals stop sharing listings. The second is hallucination: hard data, such as the price, always comes from the database, and the agent cites its source and knows how to say it does not know.
+
+
+
+## Decision 3, culture: which culture to build and how
+
+The main brake on a data project is not technology; it is people, culture and change management. In a 2026 data and AI leadership survey cited in class, 93.2% pointed to that brake, against 7% who pointed to technology.
+
+A weak culture is hard to define and explain, has little alignment with values and is controlled with lengthy procedures and bureaucracy. A strong culture is understood and can be explained by anyone, with high alignment and few rules.
+
+
+
+### How it is built
+
+- **Metaphors** that compare the organisation to a machine, a group or a family.
+- **Stories** that teach how to act in each case.
+- **Rites and ceremonies**, which combine the two above. They can be rites of initiation, of improvement (with public recognition), of integration or of conflict reduction.
+
+### How it is looked after
+
+With a data literacy plan:
+
+- Distinguish data literacy from technology literacy.
+- Understand that each person learns differently.
+- Reward curiosity.
+- Define which data skills each person needs.
+- Involve the leaders.
+- Use a common language.
+- Define what success is.
+- Remember that literacy is only the beginning.
+
+What is organisedOne optionThe other option
+The data platformMonolithic view: a data lake that centralises everything, from ingestion to useData mesh: domains, self-service and data treated as a product
+The data peopleA centralised teamEmbedded in each area, with a data lead per domain
+
+
+
+
+**Who sponsors.** Not only whoever has the authority the org chart gives, *potestas*, but also whoever has legitimate influence, *auctoritas*: reference people in their area who represent poles of informal power.
+
+
+
+**Criterion.** Choose the culture by the behaviours you want to see repeated and design rites that reinforce them. Literacy works when people can explain, communicate and discuss, and ask questions instead of just accepting.
+
+In ClinkMotto: “The first brick is a piece of data. The rest, together.”Principles: five, about arriving together, truthful data and transparency without ego.Ceremonies: a weekly stand-up with the whole company; demos and retros; a monthly ten-minute tech talk; a quarterly award for the best data-based solution; a resilience party.Sponsorship: the CEO, the CDAIO and the CFO, together with data experts from each area.
+
+
+
+## Decision 4, governance: which operating model to adopt
+
+Data governance decides who can decide what about data; management carries it out day to day. The operating model sets out roles, responsibilities and decisions, and it comes in five versions.
+
+ModelHow it worksAdvantagesDrawbacks
+DecentralisedPeople collaborate in committees and there is no single ownerA flat structure, aligned with the business and easy to set up and growMany participants; deciding among many is hard; ownership of the data stays unclear
+NetworkedThe decentralised one, formalised with a RACI matrixGives the data an owner without creating a central team that becomes a bottleneckRequires defining who is responsible, who approves, who is consulted and who is informed
+CentralisedThe most formal and mature: one person in chargeStrong leadership and simpler decisionsA big organisational challenge and a change of paradigm; you have to cover everything from the start; hard to grow step by step
+HybridCombines advantages of the centralised and decentralised modelsCombines a flat structure with alignment to the businessInherits some of the decentralised model’s problems: hard collaborative decisions and unclear ownership
+FederatedA variant of the hybrid: centralised strategy and decentralised execution, with a center of excellence that sets the guidelinesIdeal for large corporations; gives subsidiaries autonomy; allows one CDO per subsidiary, is stakeholder-oriented and supports an incremental approach by unit or regionAn ambitious, complex process; a balance has to be found and it needs many resources
+
+
+
+
+**The roles.** Every piece of data needs an owner and someone to look after its definition: the data owner, the data lead or *data steward* and, at the top, a position that brings together data, analytics and AI, the CDAIO.
+
+### What gets governed
+
+- **Business glossary:** defines each concept in business language.
+- **Technical dictionary:** says how each piece of data is stored.
+- **Business and technical metadata:** connect the two above.
+- **Quality:** measured along eight dimensions: accuracy, completeness, consistency, integrity, reasonableness, timeliness, uniqueness and validity.
+
+### What to lean on
+
+- **DAMA-DMBOK:** organises the knowledge areas of data management.
+- **SAM model** by Henderson and Venkatraman: sets out two types of alignment, strategic and tactical.
+- **Amsterdam Information Model:** known as the nine-cell model.
+
+**Criterion.** The operating model is not forever: it is chosen by the size and maturity of the organisation and evolves as it grows. Choosing a model is choosing between control and speed. Decentralising is the easiest way to start; centralising means covering everything from the start.
+
+In ClinkWe chose the networked model with a RACI matrix, which is also what the teacher recommended for a team like ours. The CDAIO approves the data and AI standards, area heads are consulted and the whole company is informed. There are five teams, each with an owner and a data lead, and two mechanisms against silos: data contracts between teams and a shared dictionary and catalogue. The glossary started from the funnel of contact, appointment, virtual attendance and sale. As it grows, it would evolve into a federated model.
+
+
+
+## The thread that ties the four decisions together
+
+Each decision answers a different question: what for (strategy), how we behave (culture) and who decides (governance), with innovation as the starting point. None of them works without the others.
+
+
+
+A strategy without culture stays a document, a culture without governance turns into good intentions, and governance without purpose is bureaucracy.
+
+## How to decide: a checklist per layer
+
+These questions help you reach a decision in each layer before writing anything down.
+
+- **Innovation:** who suffers the problem and how do I know? What data do I have or can I get? What is the most uncomfortable question for my idea?
+- **Strategy:** what are we doing it for? Do we play in control, optimisation or transformation? What could stop us getting there?
+- **Culture:** which behaviours do we want to see repeated? Who sponsors, with *potestas* and with *auctoritas*? How will we know literacy is working?
+- **Governance:** who decides what? Who owns each piece of data? How do we define and measure its quality?
 
 ## What I take away
 
-- **Problem first, technology second.** The idea only makes sense because the pain is real: the hours lost searching for a home.
-- **A good question changes the approach.** "Why would the big one want to work with you?" made us go from competing with it to uniting the small ones.
-- **You can start from the problem or from the data.** It pays to do both, because the path is not linear.
-- **An AI idea is also a business idea.** Without income and metrics, it stays a prototype. And everything rests on data: from conversation to variables, from variables to match and from match to conversion.
+- Each layer is a decision with options that cost different things: there is no single right answer, there is a criterion.
+- You can start from the problem or from the data, and it pays to make both passes, because the path is not linear.
+- A strategy is not a wish list: it is diagnosis, approach and coherence.
+- Culture is practised and measured; it is not declared.
+- Data without an owner and without a definition is not an asset, and the model that gives it an owner changes with the size of the organisation.
 
-The case continues in the next classes.
+**A personal reflection.** In most businesses, the business team is the owner of the data: it knows the company’s needs and can also speak the language of technology. That makes me think I am well placed to keep learning from both sides, business and data.
+
+Thanks to David Rey, Rafael Fernández Campos, Ubaldo González and Alberto Turégano for the classes this article is based on.
 
 ### Data strategy: purpose first, then the plan
 URL: https://isabelamrein.com/en/blog/data-strategy-purpose-and-plan/

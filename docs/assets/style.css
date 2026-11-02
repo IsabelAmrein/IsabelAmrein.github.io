@@ -504,6 +504,35 @@ figure.diagram:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .anim:not(.rm) .hero-art{animation:fadein .6s ease backwards}
 @media print{.anim :is(.tiles>li,.elist>li,.section .wrap>h2,.section .wrap>.lede,.section .wrap>.filters,.prose-head,.author-box,.post-foot){opacity:1;transform:none}}
 
+/* Aviso del RSS: banda a todo el ancho */
+.subscribe-band{background:var(--surface);border-top:1px solid var(--line);font-family:var(--f-ui)}
+.section + .subscribe-band{margin-top:var(--s7)}
+.subscribe-band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s4) var(--s6);padding-block:var(--s6)}
+.subscribe-band .sb-text{flex:1 1 26rem;min-width:0}
+.subscribe-band h2{margin:0 0 .4rem;font-size:1.3rem}
+.subscribe-band p{margin:.2rem 0;color:var(--mute);font-size:var(--t-sm)}
+.subscribe-band p strong{color:var(--ink);font-size:1.05rem}
+.subscribe-band code{overflow-wrap:anywhere;font-size:.9em;color:var(--ink)}
+.subscribe-band .btn{flex:none}
+.prose p.meta{color:var(--mute);font-size:var(--t-sm);margin-top:var(--s6)}
+
+/* Tablas y recuadros del artículo de las cuatro decisiones */
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.prose .tbl{width:min(calc(100vw - 2.5rem),860px);margin:var(--s5) 0 var(--s5) calc((100% - min(calc(100vw - 2.5rem),860px)) / 2);overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.prose .tbl:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.prose .tbl .table-wrap{overflow:visible}
+.prose .tbl table{width:100%;min-width:560px;border-collapse:collapse;font-family:var(--f-ui);font-size:.92rem;line-height:1.45}
+.prose .tbl th,.prose .tbl td{padding:.7rem .9rem;vertical-align:top;border-bottom:1px solid var(--line);text-align:left}
+.prose .tbl thead th{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:var(--paper)}
+.prose .tbl tbody th{font-weight:600;color:var(--ink)}
+.prose .tbl tr:last-child th,.prose .tbl tr:last-child td{border-bottom:0}
+.prose .clink{margin:var(--s5) 0;padding:var(--s4) var(--s5);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;background:var(--surface);font-family:var(--f-ui);font-size:.97rem;line-height:1.55}
+.prose .clink .clink-t{margin:0 0 var(--s2);font-family:var(--f-mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.prose .clink p{margin:0 0 var(--s2)}
+.prose .clink p:last-child,.prose .clink ul:last-child{margin-bottom:0}
+.prose .clink ul{margin:0;padding-left:1.2rem}
+.prose .clink li+li{margin-top:var(--s1)}
+
 /* ===== Responsive ===== */
 @media (max-width:820px){
   .hero .wrap{grid-template-columns:1fr;gap:var(--s6);padding-block:var(--s6)}
