@@ -11,6 +11,7 @@ Sitio personal y bilingüe (español e inglés) de Isabel Amrein De Luca, Lendin
 - [Máster en Data Science e IA generativa](https://isabelamrein.com/es/proyectos/master-data-science-ia/): Lo que voy aprendiendo en mi máster de Data Science e IA generativa, clase a clase, con mis palabras, mis ejemplos y proyectos pequeños para ponerlo a prueba.
 
 ### Blog
+- [Prototipar con IA: de la idea a algo que se puede probar](https://isabelamrein.com/es/blog/prototipar-con-ia/): Qué cambia al construir software con IA: describir, observar y ajustar, cómo hacer un encargo que se pueda comprobar y qué es un PRD, con esquemas y ejemplos.
 - [Cuatro decisiones para construir una empresa de datos](https://isabelamrein.com/es/blog/cuatro-decisiones-empresa-de-datos/): Innovación, estrategia, cultura y gobierno del dato como cuatro decisiones, con sus opciones, un criterio para elegir y un caso ficticio, Clink, como ejemplo.
 - [Estrategia de datos: primero el propósito, después el plan](https://isabelamrein.com/es/blog/estrategia-de-datos-proposito-y-plan/): Una estrategia de datos es un propósito más un plan. Cómo situar una organización según su madurez y por qué el dato solo genera valor si lo entiende quien lo usa.
 - [Machine Learning: cuando los datos escriben las reglas](https://isabelamrein.com/es/blog/machine-learning-datos-escriben-reglas/): Qué es el Machine Learning, cómo se construye un proyecto de principio a fin y por qué entrenar el modelo es solo la punta del iceberg.
@@ -26,6 +27,7 @@ Sitio personal y bilingüe (español e inglés) de Isabel Amrein De Luca, Lendin
 - [Master's in Data Science and Generative AI](https://isabelamrein.com/en/projects/masters-data-science-ai/): What I'm learning in my master's in Data Science and generative AI, class by class, in my own words, with my own examples and small projects to put it to the test.
 
 ### Blog
+- [Prototyping with AI: from idea to something you can test](https://isabelamrein.com/en/blog/prototyping-with-ai/): What changes when you build software with AI: describe, observe and adjust, how to write a brief you can check and what a PRD is, with diagrams and examples.
 - [Four decisions to build a data company](https://isabelamrein.com/en/blog/four-decisions-to-build-a-data-company/): Innovation, strategy, culture and data governance as four decisions, with their options, a criterion for choosing and a fictional case, Clink, as an example.
 - [Data strategy: purpose first, then the plan](https://isabelamrein.com/en/blog/data-strategy-purpose-and-plan/): A data strategy is a purpose plus a plan. How to place an organization by its maturity, and why data only creates value if the people who use it understand it.
 - [Machine learning: when the data writes the rules](https://isabelamrein.com/en/blog/machine-learning-data-writes-the-rules/): What machine learning is, how a project is built from start to finish, and why training the model is only the tip of the iceberg.

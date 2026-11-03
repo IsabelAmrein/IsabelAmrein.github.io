@@ -51,6 +51,94 @@ Este proyecto reúne lo que aprendo en mi máster en Data Science e IA generativ
 - **Con proyectos pequeños.** Si no puedo hacer algo pequeño con una idea, probablemente aún no la he entendido. Algunos viven en su propia página, como el [clasificador de reciclaje](https://isabelamrein.com/es/proyectos/clasificador-reciclaje/).
 - **Con los errores a la vista.** Lo que sale mal suele enseñar más que lo que sale bien.
 
+### Prototipar con IA: de la idea a algo que se puede probar
+URL: https://isabelamrein.com/es/blog/prototipar-con-ia/
+Resumen: Qué cambia al construir software con IA: describir, observar y ajustar, cómo hacer un encargo que se pueda comprobar y qué es un PRD, con esquemas y ejemplos.
+
+Si una IA puede escribir una aplicación en minutos, lo que se vuelve valioso es saber pedirla y saber comprobarla. Esa fue la idea de la última clase de la semana, sobre prototipado de aplicaciones con IA, de Ander Toledo.
+
+La técnica se llama *vibe coding*: describir una idea, generar una primera versión, probarla e iterar sobre el resultado. El término nació en 2025, cuando los agentes pasaron de ayudar a escribir código a crear y probar aplicaciones.
+
+Según el informe DORA 2025, citado en clase, el 90 % de los encuestados usa IA en su trabajo y el 30 % declara poca o ninguna confianza en el código que genera. Las cifras describen esa muestra. Se usa mucho y se confía poco, y por eso importa saber verificar lo que sale.
+
+La clase lo trabajó con un caso práctico, un visualizador interactivo de ventas, y con el documento que sirve para encargar algo más serio: el PRD. Lo importante no fue la herramienta, sino cómo se pedía y cómo se comprobaba.
+
+## El proceso cambia: de implementar a describir, observar y ajustar
+
+Con la IA, el trabajo pasa de traducir decisiones a código a describir, observar y ajustar. El proceso clásico de construir software tiene cuatro pasos: necesidad, diseño, implementación, y validación y uso. El nuevo proceso que propuso la clase también tiene cuatro: describir qué necesita el usuario y qué datos tenemos; construir una primera versión con alcance pequeño; observarla usándola con un caso conocido; y ajustar, pidiendo un cambio y volviendo a comprobar.
+
+
+
+Lo nuevo no son los pasos, es la vuelta: ajustar obliga a volver a comprobar.
+
+Eso reparte el trabajo de otra forma:
+
+La IA puedeLa persona decide
+Leer el contexto de un proyectoQué problema merece resolverse
+Crear y modificar archivosQué datos y reglas son válidos
+Ejecutar pruebas, desplegar y proponer correccionesCuándo el resultado es aceptable
+
+
+La columna de la derecha responde a la pregunta con la que empezó la clase: qué sigue dependiendo de nosotros.
+
+## Una petición que se puede comprobar
+
+La diferencia entre un buen y un mal resultado empieza en la petición. «Hazme un dashboard bonito con este CSV» no se puede comprobar: no dice quién lo usa, qué pregunta responde ni cuándo está bien.
+
+La clase propuso un encargo concreto, con contexto, métricas y filtros definidos, el resultado esperado y sus límites, y dejar el aspecto visual para después de fijar qué debe hacer la herramienta.
+
+Para el visualizador de ventas, el encargo se resumía en cinco preguntas:
+
+
+
+Lo que hace comprobable el encargo es la última fila. La petición inicial pedía comprobar las cifras con al menos dos casos conocidos, y estas fueron las pruebas del visualizador:
+
+SelecciónIngresosUnidades
+Todas las filas101.000 €1.255
+Norte y marzo22.300 €275
+Monitor, todas las regiones35.000 €175
+Filtro sin registrosSin datosSin datos
+
+
+## Para algo más serio, un PRD
+
+Un visualizador esconde decisiones que un encargo breve no toma: qué métrica mostrar, con qué escala, qué hacer con los datos que faltan y cómo interpretarlos. Para tomarlas por escrito, la clase usó un PRD.
+
+Un PRD, o documento de requisitos de producto, define qué construir, para quién y cómo evaluar el resultado. Se entrega a la IA junto con la petición, y tiene cuatro partes:
+
+- **Problema y usuario:** qué necesidad resolvemos y para quién.
+- **Alcance:** qué incluye el producto y qué queda fuera.
+- **Requisitos:** las funciones, los datos y las reglas que debe cumplir.
+- **Criterios de aceptación:** cómo comprobaremos que funciona.
+
+Los criterios de aceptación se escriben como situaciones con su resultado esperado: por ejemplo, si un filtro no deja ningún registro, el visualizador muestra «sin datos».
+
+## Lo que me llevo
+
+Prototipar con IA no quita el trabajo de criterio: lo adelanta. La clase lo dejó en cuatro lecciones:
+
+- **El prototipo revela preguntas.** Al verlo, aparecen requisitos que faltaban.
+- **El diseño puede convencer demasiado.** Una interfaz cuidada también puede calcular mal.
+- **La autonomía necesita contexto.** La herramienta completa lo que no especificamos.
+- **El dominio aporta criterio.** Sabemos qué resultado tiene sentido y por qué.
+
+Y cuatro hábitos para empezar:
+
+1. **Un problema concreto:** una persona, una necesidad y una decisión.
+2. **Contexto suficiente:** datos, unidades, restricciones y un ejemplo.
+3. **Una versión pequeña:** el flujo mínimo que permite aprender.
+4. **Aceptación visible:** resultados conocidos antes de construir.
+
+Los cambios, además, tienen que ser pequeños y recuperables: una intención por cambio, la versión que funciona guardada antes de seguir y una comprobación después.
+
+Un repositorio con control de versiones, como GitHub o Azure Repos, lo hace natural: cada cambio pequeño es un *commit* con un mensaje que dice su intención («ordenar los productos por ingreso»), lo nuevo se prueba en una rama sin tocar la versión que funciona, y si algo sale mal se vuelve atrás con un solo paso.
+
+Antes de pasar de un prototipo al uso real hay cinco preguntas que hacerse.
+
+
+
+**Lo que más me gustó.** Hablamos de seguridad y de cómo crear un agente «policía» que analiza y valida las aplicaciones mediante tareas programadas por la noche, para que no obstaculice el trabajo durante el día.
+
 ### Cuatro decisiones para construir una empresa de datos
 URL: https://isabelamrein.com/es/blog/cuatro-decisiones-empresa-de-datos/
 Resumen: Innovación, estrategia, cultura y gobierno del dato como cuatro decisiones, con sus opciones, un criterio para elegir y un caso ficticio, Clink, como ejemplo.
@@ -276,7 +364,7 @@ Las tres zonas no son mejores o peores, son etapas, y cada una pide cosas distin
 
 ## Un ejemplo: pedir un préstamo para un coche
 
-Para bajarlo a tierra, Rafael usó el recorrido de una persona que pide un préstamo para comprar un coche. Como trabajo en financiación al consumo, lo reconocí enseguida. Son seis momentos y cada uno usa datos distintos: fijar los objetivos estratégicos, lanzar una campaña de préstamos personales, recibir la solicitud, decidir el riesgo y el precio, desembolsar el préstamo y, por último, reportar al supervisor y medir los resultados.
+Para bajarlo a tierra, Rafael usó el recorrido de una persona que pide un préstamo para comprar un coche. Como trabajo en Business Intelligence y riesgo de préstamos personales, lo reconocí enseguida. Son seis momentos y cada uno usa datos distintos: fijar los objetivos estratégicos, lanzar una campaña de préstamos personales, recibir la solicitud, decidir el riesgo y el precio, desembolsar el préstamo y, por último, reportar al supervisor y medir los resultados.
 
 La conclusión es que no basta con tener buenos datos en cada paso. Hace falta un **modelo de datos** que conecte todos los pasos y que todos los equipos entiendan igual. Ahí quería llegar toda la clase.
 
@@ -475,6 +563,94 @@ This project collects what I learn in my master's in Data Science and generative
 - **In my own words.** Classes and slides are my starting point, but every entry is written in my own words, with examples I build myself.
 - **With small projects.** If I can't build something small with an idea, I probably haven't understood it yet. Some live on their own page, like the [recycling classifier](https://isabelamrein.com/en/projects/recycling-classifier/).
 - **With mistakes in plain sight.** What goes wrong usually teaches more than what goes right.
+
+### Prototyping with AI: from idea to something you can test
+URL: https://isabelamrein.com/en/blog/prototyping-with-ai/
+Resumen: What changes when you build software with AI: describe, observe and adjust, how to write a brief you can check and what a PRD is, with diagrams and examples.
+
+If an AI can write an application in minutes, what becomes valuable is knowing how to ask for it and how to check it. That was the idea of the last class of the week, on prototyping applications with AI, taught by Ander Toledo.
+
+The technique is called *vibe coding*: describing an idea, generating a first version, testing it and iterating on the result. The term was born in 2025, when agents went from helping to write code to building and testing applications.
+
+According to the 2025 DORA report, cited in class, 90% of respondents use AI at work and 30% say they have little or no trust in the code it generates. The figures describe that sample. It is used a lot and trusted little, which is why knowing how to verify the output matters.
+
+The class worked on it with one practical case, an interactive sales viewer, and with the document used to commission something more serious: the PRD. What mattered was not the tool, but how it was requested and how it was checked.
+
+## The process changes: from implementing to describing, observing and adjusting
+
+With AI, the work moves from translating decisions into code to describing, observing and adjusting. The classic process of building software has four steps: need, design, implementation, and validation and use. The new process proposed in class also has four: describe what the user needs and what data we have; build a first version with a small scope; observe it by using it with a known case; and adjust, by asking for a change and checking again.
+
+
+
+What is new is not the steps but the loop: adjusting forces you to check again.
+
+That splits the work differently:
+
+The AI canThe person decides
+Read a project’s contextWhich problem deserves solving
+Create and modify filesWhich data and rules are valid
+Run tests, deploy and suggest fixesWhen the result is acceptable
+
+
+The right-hand column answers the question the class started with: what still depends on us.
+
+## A request you can check
+
+The difference between a good and a bad result starts with the request. “Make me a nice dashboard with this CSV” cannot be checked: it does not say who uses it, which question it answers or when it is right.
+
+The class proposed a concrete brief, with context, defined metrics and filters, the expected result and its limits, and leaving the visual look until after you have settled what the tool must do.
+
+For the sales viewer, the brief boiled down to five questions:
+
+
+
+What makes the brief checkable is the last row. The initial request asked to check the figures against at least two known cases, and these were the viewer’s tests:
+
+SelectionRevenueUnits
+All rows€101,0001,255
+North and March€22,300275
+Monitor, all regions€35,000175
+Filter with no recordsNo dataNo data
+
+
+## For something more serious, a PRD
+
+A viewer hides decisions that a short brief does not make: which metric to show, with what scale, what to do with missing data and how to interpret it. To make those decisions in writing, the class used a PRD.
+
+A PRD, or product requirements document, defines what to build, for whom and how to evaluate the result. It is handed to the AI together with the request, and it has four parts:
+
+- **Problem and user:** which need we solve and for whom.
+- **Scope:** what the product includes and what stays out.
+- **Requirements:** the functions, data and rules it must meet.
+- **Acceptance criteria:** how we will check that it works.
+
+Acceptance criteria are written as situations with their expected result: for example, if a filter leaves no records, the viewer shows “no data”.
+
+## What I take away
+
+Prototyping with AI does not remove the work of judgement: it brings it forward. The class summed it up in four lessons:
+
+- **The prototype reveals questions.** Seeing it, missing requirements appear.
+- **Design can be too convincing.** A polished interface can also calculate wrongly.
+- **Autonomy needs context.** The tool fills in whatever we do not specify.
+- **Domain knowledge brings judgement.** We know which result makes sense and why.
+
+And four habits to start with:
+
+1. **A concrete problem:** one person, one need and one decision.
+2. **Enough context:** data, units, constraints and an example.
+3. **A small version:** the minimum flow that lets you learn.
+4. **Visible acceptance:** known results before building.
+
+Changes, besides, must be small and recoverable: one intention per change, the working version saved before moving on and a check afterwards.
+
+A version-controlled repository, such as GitHub or Azure Repos, makes that natural: each small change is a *commit* with a message stating its intention (“sort products by revenue”), new work is tested on a branch without touching the working version, and if something goes wrong you go back in one step.
+
+Before moving from a prototype to real use there are five questions to ask.
+
+
+
+**What I liked most.** We talked about security and about how to create a “police” agent that analyses and validates applications through scheduled night-time tasks, so that it does not get in the way during the day.
 
 ### Four decisions to build a data company
 URL: https://isabelamrein.com/en/blog/four-decisions-to-build-a-data-company/
@@ -701,7 +877,7 @@ The three zones aren't better or worse, they're stages, and each asks for differ
 
 ## An example: applying for a car loan
 
-To bring it down to earth, Rafael used the journey of a person applying for a loan to buy a car. Since I work in consumer finance, I recognised it right away. There are six moments and each uses different data: setting the strategic objectives, launching a personal loans campaign, receiving the application, deciding risk and price, disbursing the loan and, finally, reporting to the supervisor and measuring results.
+To bring it down to earth, Rafael used the journey of a person applying for a loan to buy a car. Since I work in Business Intelligence and risk for personal loans, I recognised it right away. There are six moments and each uses different data: setting the strategic objectives, launching a personal loans campaign, receiving the application, deciding risk and price, disbursing the loan and, finally, reporting to the supervisor and measuring results.
 
 The takeaway is that having good data at each step isn't enough. You need a **data model** that connects all the steps and that every team understands in the same way. That's where the whole class was heading.
 
