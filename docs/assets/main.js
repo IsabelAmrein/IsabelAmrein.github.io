@@ -167,3 +167,46 @@
     window.addEventListener('pageshow', function (e) { if (e.persisted) hide(); });
   }
 })();
+
+/* ---- Cabecera que se esconde al bajar y vuelve al subir · botón de progreso que sube y baja de golpe ---- */
+(function () {
+  var head = document.querySelector('.site-head'), btn = document.querySelector('.to-edge');
+  if (!head && !btn) return;
+  var root = document.documentElement, reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fg = btn && btn.querySelector('.ring-fg'), C = 144.51;
+  var prev = Math.max(0, window.scrollY), dir = 'down', anchor = prev, ticking = false;
+
+  function max() { return Math.max(0, root.scrollHeight - window.innerHeight); }
+  function mostrar() { if (head) head.classList.remove('is-hidden'); }
+  function ocultar() { if (head && !head.contains(document.activeElement)) head.classList.add('is-hidden'); }
+
+  function frame() {
+    ticking = false;
+    var y = Math.max(0, Math.min(window.scrollY, max())), m = max();
+    var d = y > prev ? 'down' : y < prev ? 'up' : dir;
+    if (d !== dir) { dir = d; anchor = prev; }
+    prev = y;
+    var delta = y - anchor;
+    if (y < 80) mostrar();
+    else if (dir === 'down' && delta > 24) ocultar();
+    else if (dir === 'up' && -delta > 10) mostrar();
+    if (btn) {
+      var p = m > 0 ? y / m : 0, flecha = y < 24 ? 'down' : p > 0.985 ? 'up' : dir;
+      btn.hidden = m < window.innerHeight * 0.4;
+      fg.style.strokeDashoffset = (C * (1 - p)).toFixed(2);
+      btn.dataset.dir = flecha;
+      var pct = Math.round(p * 100), txt = (flecha === 'down' ? btn.dataset.down : btn.dataset.up);
+      btn.setAttribute('aria-label', txt + ' (' + pct + (root.lang === 'en' ? '% ' : ' % ') + btn.dataset.pct + ')');
+    }
+  }
+  function pide() { if (!ticking) { ticking = true; window.requestAnimationFrame(frame); } }
+  window.addEventListener('scroll', pide, { passive: true });
+  window.addEventListener('resize', pide);
+  window.addEventListener('pageshow', pide);
+  if (head) head.addEventListener('focusin', mostrar);
+  if (btn) btn.addEventListener('click', function () {
+    var arriba = btn.dataset.dir === 'up';
+    window.scrollTo({ top: arriba ? 0 : max(), behavior: reduce ? 'auto' : 'smooth' });
+  });
+  frame();
+})();
